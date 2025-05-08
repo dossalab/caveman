@@ -1,6 +1,7 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
+#include <string.h>
 
 #include "video.h"
 
@@ -18,9 +19,7 @@
 int main() {
     DDRD = 0xff;
 
-    for (uint8_t i = 0; i < sizeof(video_buffer); i++) {
-        video_buffer[i] = (i % 2)? 0xff : 0x00;
-    }
+    video_buffer[89] = 0xff;
 
     setup_video();
     sei();

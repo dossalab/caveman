@@ -1,7 +1,7 @@
 from jinja2 import Template
 from argparse import ArgumentParser
 
-filename = 'video.S'
+filename = 'generated-asm.h'
 
 p = ArgumentParser()
 p.add_argument('--line-buffer-size', type=int, required=True)
