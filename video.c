@@ -5,83 +5,93 @@
 #include "video-internal.h"
 #include "generated-asm.h"
 #include <stdbool.h>
+#include <util/delay.h>
+
+// 312 full, 2 blank lines (see below)
+#define NORMAL_SCANLINES 310
+#define VIDEO_COUNTER_RELOAD_VALUE NORMAL_SCANLINES
 
 // these are used from ASM
 // the order here is important, as asm code expects it to be like that
-uint16_t video_line_counter;
+uint16_t video_line_counter = VIDEO_COUNTER_RELOAD_VALUE;
 uint8_t video_buffer[LINE_BUFFER_SIZE];
-uint8_t blank_buffer[LINE_BUFFER_SIZE];
-
 
 struct {
-    uint8_t is_blank:1;
-    uint8_t sync_high:1;
+    uint8_t is_v_blank:1;
+    uint8_t waiting_h_sync:1;
 } video_status;
 
-#define TOTAL_SCANLINES 312
-#define BLANK_SCANLINES 5
+// Note that the actual value used in calculations should be +1
+#define OCR_VALUE_SYNC_BACKPORCH 6
+#define OCR_VALUE_SCANLINE 88
 
-extern void do_scanline(uint8_t *buffer);
+// 2 scanlines
+#define OCR_VALUE_BLANK (192 + OCR_VALUE_SYNC_BACKPORCH)
 
 ISR(TIMER2_COMP_vect) {
-    if (!video_status.sync_high) {
-        // first occurance, raise it back and exit
-        video_status.sync_high = 1;
-
-        // blanks does not need the pulses, so ignore it
-        if (!video_status.is_blank) {
-            VIDEO_PORT |= (1U << VIDEO_SYNC_BIT);
+    if (video_status.waiting_h_sync) {
+        // Hardware already asserted sync pulse for us.
+        if (!video_status.is_v_blank) {
+            // Skip backporch, and then draw
+            OCR2 = OCR_VALUE_SYNC_BACKPORCH;
+        } else {
+            // If we're doing a vblank, just load a blank interval, and see you on the other side!
+            OCR2 = OCR_VALUE_BLANK;
         }
 
+        video_status.waiting_h_sync = 0;
         return;
     }
 
-    TCCR2 = VIDEO_TIMER_VALUE_STOP;
+    // Sync pulse de-asserted, we're ready to draw. Load the next OCR2 to wake us up when
+    // the sync pulse should be happening
+    OCR2 = OCR_VALUE_SCANLINE;
 
-    uint8_t *buffer_to_use = video_status.is_blank? blank_buffer : video_buffer;
-    inline_asm_generate_scanline(buffer_to_use);
+    // Start of visible line
+    video_status.is_v_blank = false;
+    video_status.waiting_h_sync = 1;
+
+    inline_asm_generate_scanline(video_buffer);
     PORTD = 0;
 
     video_line_counter--;
     if (video_line_counter == 0) {
-        video_status.is_blank = false;
-        video_line_counter = TOTAL_SCANLINES;
-    } else if (video_line_counter <= BLANK_SCANLINES) {
-        video_status.is_blank = true;
+        // Prepare the vertical blanking. Next time we enter this ISR, sync pulse will assert
+        video_line_counter = VIDEO_COUNTER_RELOAD_VALUE;
+        video_status.is_v_blank = true;
     }
-
-    video_status.sync_high = 0;
-    TCCR2 = VIDEO_TIMER_VALUE_START;
-    VIDEO_PORT &= ~(1U << VIDEO_SYNC_BIT);
 }
-
-// The problem is that ISR itself has some latency so we have to offset our OCR2 setting here
-// This is calibrated using a logic analyzer for the most stable image :)
-#define OCR2_SKEW 4
 
 void setup_video(void)
 {
     // Enable timer 2 OCR compare interrupt
     TIMSK |= (1 << OCIE2);
 
-    // Tick is 0.083 us, so that gives us compare match on ~4.7us
-    OCR2 = 56 - OCR2_SKEW;
-
     // Setup desired pins to output
-    VIDEO_DDR |=  (1 << VIDEO_SYNC_BIT);
+    VIDEO_DDR |= (1 << VIDEO_SYNC_BIT);
 
-    // Sync goes low..
-    VIDEO_PORT &= ~(1 << VIDEO_SYNC_BIT);
+    // Initial OC2 value is 0. So we're 'done' the sync pulse, proceed straight to scanline
+    video_status.waiting_h_sync = 0;
+    OCR2 = OCR_VALUE_SYNC_BACKPORCH;
 
     // And run the timer..
-    TCCR2 = VIDEO_TIMER_VALUE_START;
+    TCNT2 = 0;
+    TCCR2 = VIDEO_TIMER_VALUE_RUN;
 
     // Now CPU can do some work in the main loop until timer interrupt fires
 }
 
-void video_wait_vsync()
+void video_wait_v_blank()
 {
-    while (!video_status.is_blank) {
+    while (!video_status.is_v_blank) {
+        asm volatile ("" ::: "memory");
+        ;;
+    }
+}
+
+void video_wait_frame_start()
+{
+    while (video_status.is_v_blank) {
         asm volatile ("" ::: "memory");
         ;;
     }

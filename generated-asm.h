@@ -420,9 +420,5 @@
             "out %[port], r16\n\t" \
             "ld r16, Z+\n\t" \
             "out %[port], r16\n\t" \
-            "ld r16, Z+\n\t" \
-            "out %[port], r16\n\t" \
-            "ld r16, Z+\n\t" \
-            "out %[port], r16\n\t" \
         :: [port] "I" (_SFR_IO_ADDR(PORTD)), "z" (buffer) : "r16" \
         )

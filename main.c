@@ -20,14 +20,27 @@ int main() {
     DDRD = 0xff;
 
     video_buffer[89] = 0xff;
+    // memset(video_buffer, 0xff, LINE_BUFFER_SIZE);
 
     setup_video();
     sei();
 
     DDRB |= (1 << PIN0);
+
+    uint8_t pos_x = 0;
     while (1) {
-        PORTB ^= (1 << PIN0);
-        _delay_ms(100);
+        video_wait_v_blank();
+
+        video_buffer[pos_x] = 0x00;
+        video_buffer[pos_x + 1] = 0xff;
+
+        pos_x ++;
+        if (pos_x >= LINE_BUFFER_SIZE - 1) {
+            pos_x = 0;
+        }
+
+        // Keep that here to syncronize this loop with our FPS
+        video_wait_frame_start();
     }
 
     return 0;
