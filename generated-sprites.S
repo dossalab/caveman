@@ -261,19 +261,19 @@ sprites_sprite_png_start:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 ; row 15
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     ret

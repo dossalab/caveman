@@ -14,9 +14,7 @@
 // these are used from ASM
 // the order here is important, as asm code expects it to be like that
 uint16_t video_line_counter = VIDEO_COUNTER_RELOAD_VALUE;
-uint8_t video_buffer[LINE_BUFFER_SIZE];
-
-uint8_t sprite_line_counter = 0;
+// uint8_t video_buffer[LINE_BUFFER_SIZE];
 
 struct {
     uint8_t is_v_blank:1;
@@ -24,11 +22,19 @@ struct {
 } video_status;
 
 // Note that the actual value used in calculations should be +1
-#define OCR_VALUE_SYNC_BACKPORCH 6
-#define OCR_VALUE_SCANLINE 88
+#define OCR_VALUE_SYNC_BACKPORCH 7
+#define OCR_VALUE_SCANLINE 87
 
 // 2 scanlines
 #define OCR_VALUE_BLANK (192 + OCR_VALUE_SYNC_BACKPORCH)
+
+struct sprite my_sprite_list[] = {
+    {.line = 50, .line_counter = 0 },
+    {.line = 200, .line_counter = 0 },
+    {.line = 200 + 20, .line_counter = 0 },
+};
+
+#define ARRAY_SIZE(x) (sizeof(x) / sizeof(x[0]))
 
 ISR(TIMER2_COMP_vect) {
     if (video_status.waiting_h_sync) {
@@ -53,7 +59,7 @@ ISR(TIMER2_COMP_vect) {
     video_status.is_v_blank = false;
     video_status.waiting_h_sync = 1;
 
-    // inline_asm_generate_scanline(video_buffer);
+    // delay scanline slightly
     asm __volatile__ (
         "nop\n\t"
         "nop\n\t"
@@ -83,34 +89,47 @@ ISR(TIMER2_COMP_vect) {
         "nop\n\t"
         "nop\n\t"
         "nop\n\t"
-
-        "lsl %[line]\n\t"
-        "lsl %[line]\n\t"
-        "lsl %[line]\n\t"
-        "lsl %[line]\n\t"
-
-        "ldi r30, pm_lo8(sprites_sprite_png_start)\n\t"
-        "ldi r31, pm_hi8(sprites_sprite_png_start)\n\t"
-
-        "add r30, %[line]\n\t"
-        "adc r31, __zero_reg__\n\t"
-
-        "icall\n\t"
-        :: [line] "a" (sprite_line_counter)
     );
-    PORTD = 0;
+
+    for (uint8_t i = 0; i < ARRAY_SIZE(my_sprite_list); i++) {
+        struct sprite *sprite = &my_sprite_list[i];
+
+        if (video_line_counter <= sprite->line && sprite->line_counter < 16) {
+            PORTB ^= (1 << PIN2);
+
+            asm __volatile__ (
+                "mov r18, %[line]\n\t"
+                "lsl r18\n\t"
+                "lsl r18\n\t"
+                "lsl r18\n\t"
+                "lsl r18\n\t"
+
+                "ldi r30, pm_lo8(sprites_sprite_png_start)\n\t"
+                "ldi r31, pm_hi8(sprites_sprite_png_start)\n\t"
+
+                "add r30, r18\n\t"
+                "adc r31, __zero_reg__\n\t"
+
+                "icall\n\t"
+                :: [line] "a" (sprite->line_counter): "r30", "r31", "r18"
+            );
+            PORTD = 0;
+
+            sprite->line_counter++;
+        }
+    }
+
 
     video_line_counter--;
-
-    sprite_line_counter++;
-    if (sprite_line_counter >= 16) {
-        sprite_line_counter = 0;
-    }
 
     if (video_line_counter == 0) {
         // Prepare the vertical blanking. Next time we enter this ISR, sync pulse will assert
         video_line_counter = VIDEO_COUNTER_RELOAD_VALUE;
-        sprite_line_counter = 0;
+
+        for (uint8_t i = 0; i < ARRAY_SIZE(my_sprite_list); i++) {
+            my_sprite_list[i].line_counter = 0;
+        }
+
         video_status.is_v_blank = true;
     }
 }

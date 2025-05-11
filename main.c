@@ -16,6 +16,8 @@
 // so we can output 4 pixels per us.
 // so that's around 200 pixels?
 
+extern struct sprite my_sprite_list[2];
+
 int main() {
     DDRD = 0xff;
 
@@ -24,6 +26,14 @@ int main() {
     sei();
 
     while (1) {
+        video_wait_v_blank();
+
+        my_sprite_list[0].line++;
+        if (my_sprite_list[0].line > 250) {
+            my_sprite_list[0].line = 16;
+        }
+
+        video_wait_frame_start();
     }
 
     return 0;
