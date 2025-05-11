@@ -22,21 +22,59 @@ struct {
 } video_status;
 
 // Note that the actual value used in calculations should be +1
-#define OCR_VALUE_SYNC_BACKPORCH 7
-#define OCR_VALUE_SCANLINE 87
+#define OCR_VALUE_SYNC_BACKPORCH 6
+#define OCR_VALUE_SCANLINE 88
 
 // 2 scanlines
 #define OCR_VALUE_BLANK (192 + OCR_VALUE_SYNC_BACKPORCH)
 
+extern void sprites_sprite_png_start(void);
+extern void sprites_snake_png_start(void);
+extern void sprites_monk_png_start(void);
+
 struct sprite my_sprite_list[] = {
-    {.line = 50, .line_counter = 0 },
-    {.line = 200, .line_counter = 0 },
-    {.line = 200 + 20, .line_counter = 0 },
+    {.line = 50, .line_counter = 0, .data_start = sprites_sprite_png_start, .width = 16, .height = 16 },
+    {.line = 200, .line_counter = 0, .data_start = sprites_monk_png_start, .width = 64, .height = 16 },
+    {.line = 260, .line_counter = 0, .data_start = sprites_snake_png_start, .width = 16, .height = 16 },
 };
 
 #define ARRAY_SIZE(x) (sizeof(x) / sizeof(x[0]))
 
-ISR(TIMER2_COMP_vect) {
+void (*video_line_jumptable[NORMAL_SCANLINES])(void);
+
+void empty_line(void) {
+}
+
+void blink_line(void) {
+    PORTD |= (1 << PIN7);
+    PORTD &= ~(1 << PIN7);
+}
+
+void build_jumptable()
+{
+    for (uint8_t i = 0; i < ARRAY_SIZE(my_sprite_list); i++) {
+        my_sprite_list[i].line_counter = 0;
+    }
+
+    for (uint16_t line = NORMAL_SCANLINES - 1;; line--) {
+        video_line_jumptable[line] = empty_line;
+
+        for (uint8_t i = 0; i < ARRAY_SIZE(my_sprite_list); i++) {
+            struct sprite *sprite = &my_sprite_list[i];
+
+            if (line <= sprite->line && sprite->line_counter < sprite->height) {
+                video_line_jumptable[line] = sprite->data_start + sprite->line_counter * sprite->width;
+                sprite->line_counter++;
+            }
+        }
+
+        if (line == 0) {
+            break;
+        }
+    }
+}
+
+ISR(TIMER2_COMP_vect)  {
     if (video_status.waiting_h_sync) {
         // Hardware already asserted sync pulse for us.
         if (!video_status.is_v_blank) {
@@ -89,46 +127,64 @@ ISR(TIMER2_COMP_vect) {
         "nop\n\t"
         "nop\n\t"
         "nop\n\t"
+        "nop\n\t"
+        "nop\n\t"
+        "nop\n\t"
+        "nop\n\t"
+        "nop\n\t"
+        "nop\n\t"
+        "nop\n\t"
+        "nop\n\t"
+        "nop\n\t"
+        "nop\n\t"
+        "nop\n\t"
     );
 
-    for (uint8_t i = 0; i < ARRAY_SIZE(my_sprite_list); i++) {
-        struct sprite *sprite = &my_sprite_list[i];
+    // for (uint8_t i = 0; i < ARRAY_SIZE(my_sprite_list); i++) {
+    //     struct sprite *sprite = &my_sprite_list[i];
 
-        if (video_line_counter <= sprite->line && sprite->line_counter < 16) {
-            PORTB ^= (1 << PIN2);
+    //     if (video_line_counter <= sprite->line && sprite->line_counter < 16) {
+    //         PORTB ^= (1 << PIN2);
 
-            asm __volatile__ (
-                "mov r18, %[line]\n\t"
-                "lsl r18\n\t"
-                "lsl r18\n\t"
-                "lsl r18\n\t"
-                "lsl r18\n\t"
+    //         asm __volatile__ (
+    //             "mov r18, %[line]\n\t"
+    //             "lsl r18\n\t"
+    //             "lsl r18\n\t"
+    //             "lsl r18\n\t"
+    //             "lsl r18\n\t"
 
-                "ldi r30, pm_lo8(sprites_sprite_png_start)\n\t"
-                "ldi r31, pm_hi8(sprites_sprite_png_start)\n\t"
+    //             "ldi r30, pm_lo8(sprites_sprite_png_start)\n\t"
+    //             "ldi r31, pm_hi8(sprites_sprite_png_start)\n\t"
 
-                "add r30, r18\n\t"
-                "adc r31, __zero_reg__\n\t"
+    //             "add r30, r18\n\t"
+    //             "adc r31, __zero_reg__\n\t"
 
-                "icall\n\t"
-                :: [line] "a" (sprite->line_counter): "r30", "r31", "r18"
-            );
-            PORTD = 0;
+    //             "icall\n\t"
+    //             :: [line] "a" (sprite->line_counter): "r30", "r31", "r18"
+    //         );
+    //         PORTD = 0;
 
-            sprite->line_counter++;
-        }
-    }
+    //         sprite->line_counter++;
+    //     }
+    // }
 
-
+    // GCC hates a function call here, which sucks. We can still do it in asm, though. We just need a correct address
+    // Assumption - called function does not use any registers
     video_line_counter--;
+
+    asm __volatile__ (
+        "icall\n\t"
+        :: [addr] "z" (video_line_jumptable[video_line_counter])
+    );
+    PORTD = 0;
 
     if (video_line_counter == 0) {
         // Prepare the vertical blanking. Next time we enter this ISR, sync pulse will assert
         video_line_counter = VIDEO_COUNTER_RELOAD_VALUE;
 
-        for (uint8_t i = 0; i < ARRAY_SIZE(my_sprite_list); i++) {
-            my_sprite_list[i].line_counter = 0;
-        }
+        // for (uint8_t i = 0; i < ARRAY_SIZE(my_sprite_list); i++) {
+        //     my_sprite_list[i].line_counter = 0;
+        // }
 
         video_status.is_v_blank = true;
     }
@@ -136,6 +192,10 @@ ISR(TIMER2_COMP_vect) {
 
 void setup_video(void)
 {
+    for (uint16_t i = 0; i < ARRAY_SIZE(video_line_jumptable); i++) {
+        video_line_jumptable[i] = empty_line;
+    }
+
     // Enable timer 2 OCR compare interrupt
     TIMSK |= (1 << OCIE2);
 

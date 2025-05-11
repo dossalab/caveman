@@ -1,9 +1,9 @@
 LINE_BUFFER_SIZE := 208
 
 all: build-asm-helpers
-	avr-gcc -g -mmcu=atmega8 -DLINE_BUFFER_SIZE=${LINE_BUFFER_SIZE} -DF_CPU=12000000UL -Os -o main.elf main.c video.c generated-sprites.S
+	avr-gcc -g -mmcu=atmega8 -DLINE_BUFFER_SIZE=${LINE_BUFFER_SIZE} -DF_CPU=12000000UL -Os -o main.elf main.c video.c generated-sprites.S -Wextra -Wpedantic
 	avr-size main.elf
 
 build-asm-helpers:
 	python build-asm-helpers.py --line-buffer-size ${LINE_BUFFER_SIZE}
-	python generate-sprites.py --input sprite.png
+	python generate-sprites.py --input sprite.png --input snake.png --input monk.png

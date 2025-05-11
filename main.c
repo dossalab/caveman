@@ -27,12 +27,14 @@ int main() {
 
     while (1) {
         video_wait_v_blank();
-
         my_sprite_list[0].line++;
         if (my_sprite_list[0].line > 250) {
             my_sprite_list[0].line = 16;
         }
 
+        PORTB |= (1 << PIN2);
+        build_jumptable();
+        PORTB &= ~(1 << PIN2);
         video_wait_frame_start();
     }
 
