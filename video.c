@@ -11,15 +11,31 @@
 #define NORMAL_SCANLINES 310
 #define VIDEO_COUNTER_RELOAD_VALUE NORMAL_SCANLINES
 
-// these are used from ASM
-// the order here is important, as asm code expects it to be like that
-uint16_t video_line_counter = VIDEO_COUNTER_RELOAD_VALUE;
-// uint8_t video_buffer[LINE_BUFFER_SIZE];
+#define MAX_SPRITES 10
+#define SPRITE_LIST_POISON 0xFF
 
-struct {
-    uint8_t is_v_blank:1;
-    uint8_t waiting_h_sync:1;
-} video_status;
+struct generator_state {
+    uint8_t sprite_list[MAX_SPRITES];
+    uint8_t current_sprite;
+    uint8_t sprite_line_counter;
+    uint16_t video_line_counter;
+
+    struct {
+        uint8_t is_v_blank;
+        uint8_t waiting_h_sync;
+    } status_bits;
+};
+
+static struct generator_state g_state = {
+    .sprite_list = { [0] = SPRITE_LIST_POISON },
+    .current_sprite = 0,
+    .sprite_line_counter = 0,
+    .video_line_counter = VIDEO_COUNTER_RELOAD_VALUE,
+    .status_bits = {
+        .is_v_blank = 0,
+        .waiting_h_sync = 0,
+    }
+};
 
 // Note that the actual value used in calculations should be +1
 #define OCR_VALUE_SYNC_BACKPORCH 6
@@ -33,38 +49,22 @@ extern void sprites_snake_png_start(void);
 extern void sprites_monk_png_start(void);
 
 struct sprite my_sprite_list[] = {
-    {.line = 50, .line_counter = 0, .data_start = sprites_sprite_png_start, .width = 16, .height = 16 },
-    {.line = 200, .line_counter = 0, .data_start = sprites_monk_png_start, .width = 64, .height = 16 },
-    {.line = 260, .line_counter = 0, .data_start = sprites_snake_png_start, .width = 16, .height = 16 },
+    {.line = 50, .data_start = sprites_sprite_png_start, .width = 16, .height = 16 },
+    {.line = 200, .data_start = sprites_monk_png_start, .width = 64, .height = 16 },
+    {.line = 260, .data_start = sprites_snake_png_start, .width = 16, .height = 16 },
 };
 
 #define ARRAY_SIZE(x) (sizeof(x) / sizeof(x[0]))
 
-void (*video_line_jumptable[NORMAL_SCANLINES])(void);
-
-void empty_line(void) {
-}
-
-void blink_line(void) {
-    PORTD |= (1 << PIN7);
-    PORTD &= ~(1 << PIN7);
-}
-
 void build_jumptable()
 {
-    for (uint8_t i = 0; i < ARRAY_SIZE(my_sprite_list); i++) {
-        my_sprite_list[i].line_counter = 0;
-    }
-
+    uint8_t sprite_list_insert_position = 0;
     for (uint16_t line = NORMAL_SCANLINES - 1;; line--) {
-        video_line_jumptable[line] = empty_line;
-
         for (uint8_t i = 0; i < ARRAY_SIZE(my_sprite_list); i++) {
             struct sprite *sprite = &my_sprite_list[i];
 
-            if (line <= sprite->line && sprite->line_counter < sprite->height) {
-                video_line_jumptable[line] = sprite->data_start + sprite->line_counter * sprite->width;
-                sprite->line_counter++;
+            if (line == sprite->line) {
+                g_state.sprite_list[sprite_list_insert_position++] = i;
             }
         }
 
@@ -72,12 +72,16 @@ void build_jumptable()
             break;
         }
     }
+
+    // terminate the list
+    g_state.sprite_list[sprite_list_insert_position] = SPRITE_LIST_POISON;
+    g_state.current_sprite = 0;
 }
 
 ISR(TIMER2_COMP_vect)  {
-    if (video_status.waiting_h_sync) {
+    if (g_state.status_bits.waiting_h_sync) {
         // Hardware already asserted sync pulse for us.
-        if (!video_status.is_v_blank) {
+        if (!g_state.status_bits.is_v_blank) {
             // Skip backporch, and then draw
             OCR2 = OCR_VALUE_SYNC_BACKPORCH;
         } else {
@@ -85,7 +89,7 @@ ISR(TIMER2_COMP_vect)  {
             OCR2 = OCR_VALUE_BLANK;
         }
 
-        video_status.waiting_h_sync = 0;
+        g_state.status_bits.waiting_h_sync = 0;
         return;
     }
 
@@ -94,108 +98,49 @@ ISR(TIMER2_COMP_vect)  {
     OCR2 = OCR_VALUE_SCANLINE;
 
     // Start of visible line
-    video_status.is_v_blank = false;
-    video_status.waiting_h_sync = 1;
-
-    // delay scanline slightly
-    asm __volatile__ (
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-        "nop\n\t"
-    );
-
-    // for (uint8_t i = 0; i < ARRAY_SIZE(my_sprite_list); i++) {
-    //     struct sprite *sprite = &my_sprite_list[i];
-
-    //     if (video_line_counter <= sprite->line && sprite->line_counter < 16) {
-    //         PORTB ^= (1 << PIN2);
-
-    //         asm __volatile__ (
-    //             "mov r18, %[line]\n\t"
-    //             "lsl r18\n\t"
-    //             "lsl r18\n\t"
-    //             "lsl r18\n\t"
-    //             "lsl r18\n\t"
-
-    //             "ldi r30, pm_lo8(sprites_sprite_png_start)\n\t"
-    //             "ldi r31, pm_hi8(sprites_sprite_png_start)\n\t"
-
-    //             "add r30, r18\n\t"
-    //             "adc r31, __zero_reg__\n\t"
-
-    //             "icall\n\t"
-    //             :: [line] "a" (sprite->line_counter): "r30", "r31", "r18"
-    //         );
-    //         PORTD = 0;
-
-    //         sprite->line_counter++;
-    //     }
-    // }
+    g_state.status_bits.is_v_blank = false;
+    g_state.status_bits.waiting_h_sync = 1;
 
     // GCC hates a function call here, which sucks. We can still do it in asm, though. We just need a correct address
     // Assumption - called function does not use any registers
-    video_line_counter--;
+    g_state.video_line_counter--;
 
-    asm __volatile__ (
-        "icall\n\t"
-        :: [addr] "z" (video_line_jumptable[video_line_counter])
-    );
-    PORTD = 0;
+    uint8_t sprite_table_index = g_state.sprite_list[g_state.current_sprite];
 
-    if (video_line_counter == 0) {
+    if (sprite_table_index != SPRITE_LIST_POISON) {
+        struct sprite *s = &my_sprite_list[sprite_table_index];
+
+        // XXX: why barrier is neede here?
+        asm volatile ("" ::: "memory");
+
+        if (g_state.video_line_counter <= s->line && g_state.sprite_line_counter < s->height) {
+            void *data = s->data_start + g_state.sprite_line_counter * s->width;
+
+            asm __volatile__ (
+                "icall\n\t"
+                :: [addr] "z" (data)
+            );
+            PORTD = 0;
+            g_state.sprite_line_counter++;
+
+            // end of drawing, go to next sprite
+            if (g_state.sprite_line_counter == s->height) {
+                g_state.current_sprite++;
+                g_state.sprite_line_counter = 0;
+            }
+        }
+    }
+
+
+    if (g_state.video_line_counter == 0) {
         // Prepare the vertical blanking. Next time we enter this ISR, sync pulse will assert
-        video_line_counter = VIDEO_COUNTER_RELOAD_VALUE;
-
-        // for (uint8_t i = 0; i < ARRAY_SIZE(my_sprite_list); i++) {
-        //     my_sprite_list[i].line_counter = 0;
-        // }
-
-        video_status.is_v_blank = true;
+        g_state.video_line_counter = VIDEO_COUNTER_RELOAD_VALUE;
+        g_state.status_bits.is_v_blank = true;
     }
 }
 
 void setup_video(void)
 {
-    for (uint16_t i = 0; i < ARRAY_SIZE(video_line_jumptable); i++) {
-        video_line_jumptable[i] = empty_line;
-    }
-
     // Enable timer 2 OCR compare interrupt
     TIMSK |= (1 << OCIE2);
 
@@ -203,7 +148,7 @@ void setup_video(void)
     VIDEO_DDR |= (1 << VIDEO_SYNC_BIT);
 
     // Initial OC2 value is 0. So we're 'done' the sync pulse, proceed straight to scanline
-    video_status.waiting_h_sync = 0;
+    g_state.status_bits.waiting_h_sync = 0;
     OCR2 = OCR_VALUE_SYNC_BACKPORCH;
 
     // And run the timer..
@@ -215,7 +160,7 @@ void setup_video(void)
 
 void video_wait_v_blank()
 {
-    while (!video_status.is_v_blank) {
+    while (!g_state.status_bits.is_v_blank) {
         asm volatile ("" ::: "memory");
         ;;
     }
@@ -223,7 +168,7 @@ void video_wait_v_blank()
 
 void video_wait_frame_start()
 {
-    while (video_status.is_v_blank) {
+    while (g_state.status_bits.is_v_blank) {
         asm volatile ("" ::: "memory");
         ;;
     }
