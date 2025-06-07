@@ -3,7 +3,7 @@
 
 #include "video.h"
 #include "video-internal.h"
-#include "generated-asm.h"
+#include "generated-sprites.h"
 #include <stdbool.h>
 #include <util/delay.h>
 
@@ -44,14 +44,10 @@ static struct generator_state g_state = {
 // 2 scanlines
 #define OCR_VALUE_BLANK (192 + OCR_VALUE_SYNC_BACKPORCH)
 
-extern void sprites_sprite_png_start(void);
-extern void sprites_snake_png_start(void);
-extern void sprites_monk_png_start(void);
-
 struct sprite my_sprite_list[] = {
-    {.line = 50, .data_start = sprites_sprite_png_start, .width = 16, .height = 16 },
-    {.line = 200, .data_start = sprites_monk_png_start, .width = 64, .height = 16 },
-    {.line = 260, .data_start = sprites_snake_png_start, .width = 16, .height = 16 },
+    {.line = 50, .data_start = sprites_sprite_png_15x16_start, .width = 16, .height = 16 },
+    {.line = 200, .data_start = sprites_monk_png_63x16_start, .width = 64, .height = 16 },
+    {.line = 260, .data_start = sprites_snake_png_15x16_start, .width = 16, .height = 16 },
 };
 
 #define ARRAY_SIZE(x) (sizeof(x) / sizeof(x[0]))
