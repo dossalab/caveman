@@ -28,7 +28,7 @@ int main() {
     while (1) {
         video_wait_v_blank();
         my_sprite_list[0].line++;
-        if (my_sprite_list[0].line > 250) {
+        if (my_sprite_list[0].line > 100) {
             my_sprite_list[0].line = 16;
         }
 

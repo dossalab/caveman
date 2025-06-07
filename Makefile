@@ -18,6 +18,6 @@ flash: all
 	avrdude -c ${AVRDUDE_PROGRAMMER} -p m8 -v -U flash:w:main.elf
 
 gif:
-	./tools/capture-gif.sh ${CAMERA_NAME} ./images/progress.mp4
+	./tools/capture-gif.sh ${CAMERA_NAME} ./res/progress.gif
 
 .PHONY: all flash build-asm-helpers
