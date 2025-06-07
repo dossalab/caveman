@@ -45,8 +45,8 @@ static struct generator_state g_state = {
 #define OCR_VALUE_BLANK (192 + OCR_VALUE_SYNC_BACKPORCH)
 
 struct sprite my_sprite_list[] = {
-    {.line = 50, .data_start = sprites_sprite_png_15x16_start, .width = 16, .height = 16 },
-    {.line = 200, .data_start = sprites_monk_png_63x16_start, .width = 64, .height = 16 },
+    {.line = 50, .data_start = sprites_elephant_png_15x16_start, .width = 16, .height = 16 },
+    {.line = 200, .data_start = sprites_monke_png_63x16_start, .width = 64, .height = 16 },
     {.line = 260, .data_start = sprites_snake_png_15x16_start, .width = 16, .height = 16 },
 };
 

@@ -7,8 +7,11 @@ all: build-asm-helpers
 	avr-size main.elf
 
 build-asm-helpers:
-	python build-asm-helpers.py --line-buffer-size ${LINE_BUFFER_SIZE}
-	python generate-sprites.py --input sprite.png --input snake.png --input monk.png
+	python generate-sprites.py \
+		--basedir sprites \
+		--input elephant.png \
+		--input snake.png \
+		--input monke.png
 
 flash: all
 	avrdude -c ${AVRDUDE_PROGRAMMER} -p m8 -v -U flash:w:main.elf

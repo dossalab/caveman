@@ -3,8 +3,8 @@
 #include <avr/io.h>
 .text
 
-.global sprites_sprite_png_15x16_start
-sprites_sprite_png_15x16_start:
+.global sprites_elephant_png_15x16_start
+sprites_elephant_png_15x16_start:
 ; row 0
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -551,8 +551,8 @@ sprites_snake_png_15x16_start:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-.global sprites_monk_png_63x16_start
-sprites_monk_png_63x16_start:
+.global sprites_monke_png_63x16_start
+sprites_monke_png_63x16_start:
 ; row 0
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
