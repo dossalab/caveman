@@ -15,15 +15,15 @@ delay_loop:
 undyne_png_data_0:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 31 of the same entries follow
-    ldi r18, 17
+    ldi r18, 18
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -34,15 +34,16 @@ undyne_png_data_1:
 ; 30 of the same entries follow
     ldi r18, 17
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -51,19 +52,16 @@ undyne_png_data_1:
 undyne_png_data_2:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 29 of the same entries follow
-    ldi r18, 16
+    ldi r18, 17
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -72,19 +70,16 @@ undyne_png_data_2:
 undyne_png_data_3:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 29 of the same entries follow
-    ldi r18, 16
+    ldi r18, 17
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -95,6 +90,8 @@ undyne_png_data_4:
 ; 24 of the same entries follow
     ldi r18, 13
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -106,12 +103,11 @@ undyne_png_data_4:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -122,6 +118,8 @@ undyne_png_data_5:
 ; 21 of the same entries follow
     ldi r18, 11
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -154,7 +152,7 @@ undyne_png_data_5:
 undyne_png_data_6:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 20 of the same entries follow
-    ldi r18, 10
+    ldi r18, 11
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -162,11 +160,9 @@ undyne_png_data_6:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -177,11 +173,9 @@ undyne_png_data_6:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -190,8 +184,9 @@ undyne_png_data_6:
 undyne_png_data_7:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 19 of the same entries follow
-    ldi r18, 9
+    ldi r18, 10
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -230,6 +225,8 @@ undyne_png_data_8:
 ; 18 of the same entries follow
     ldi r18, 9
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -266,8 +263,9 @@ undyne_png_data_9:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 16 of the same entries follow
-    ldi r18, 7
+    ldi r18, 8
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -286,11 +284,9 @@ undyne_png_data_9:
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -309,13 +305,14 @@ undyne_png_data_10:
 ; 12 of the same entries follow
     ldi r18, 5
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -350,7 +347,7 @@ undyne_png_data_11:
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
 ; 20 of the same entries follow
-    ldi r18, 10
+    ldi r18, 11
     rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -386,7 +383,7 @@ undyne_png_data_12:
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
 ; 20 of the same entries follow
-    ldi r18, 10
+    ldi r18, 11
     rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -422,28 +419,24 @@ undyne_png_data_13:
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
 ; 19 of the same entries follow
-    ldi r18, 9
+    ldi r18, 10
+    rcall delay_loop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
     rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -459,23 +452,23 @@ undyne_png_data_14:
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
 ; 19 of the same entries follow
-    ldi r18, 9
+    ldi r18, 10
     rcall delay_loop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
 ; 10 of the same entries follow
-    ldi r18, 3
+    ldi r18, 4
     rcall delay_loop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -492,6 +485,8 @@ undyne_png_data_15:
 ; 18 of the same entries follow
     ldi r18, 9
     rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -502,13 +497,10 @@ undyne_png_data_15:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -530,6 +522,8 @@ undyne_png_data_16:
 ; 18 of the same entries follow
     ldi r18, 9
     rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -540,14 +534,9 @@ undyne_png_data_16:
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -560,23 +549,18 @@ undyne_png_data_16:
 .global undyne_png_data_17
 undyne_png_data_17:
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
 ; 14 of the same entries follow
-    ldi r18, 6
+    ldi r18, 7
     rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -598,21 +582,19 @@ undyne_png_data_17:
 undyne_png_data_18:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 10 of the same entries follow
+    ldi r18, 4
+    rcall delay_loop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
     ldi r18, 3
     rcall delay_loop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 9 of the same entries follow
     ldi r18, 3
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -634,6 +616,8 @@ undyne_png_data_19:
 ; 30 of the same entries follow
     ldi r18, 17
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -652,17 +636,17 @@ undyne_png_data_19:
 undyne_png_data_20:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 31 of the same entries follow
-    ldi r18, 17
+    ldi r18, 18
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -673,6 +657,8 @@ undyne_png_data_21:
 ; 33 of the same entries follow
     ldi r18, 19
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -686,33 +672,31 @@ undyne_png_data_21:
 undyne_png_data_22:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 19 of the same entries follow
-    ldi r18, 9
+    ldi r18, 10
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -721,12 +705,14 @@ undyne_png_data_22:
 undyne_png_data_23:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
     rcall delay_loop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -752,28 +738,13 @@ undyne_png_data_23:
 undyne_png_data_24:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -781,20 +752,29 @@ undyne_png_data_24:
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -803,28 +783,32 @@ undyne_png_data_24:
 undyne_png_data_25:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 10 of the same entries follow
-    ldi r18, 3
+    ldi r18, 4
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 10 of the same entries follow
-    ldi r18, 3
+    ldi r18, 4
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     ret
@@ -834,7 +818,7 @@ undyne_png_data_25:
 undyne_png_data_26:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 14 of the same entries follow
-    ldi r18, 6
+    ldi r18, 7
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -842,16 +826,21 @@ undyne_png_data_26:
 ; 9 of the same entries follow
     ldi r18, 3
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 15 of the same entries follow
     ldi r18, 7
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 10 of the same entries follow
-    ldi r18, 3
+    ldi r18, 4
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -863,32 +852,32 @@ undyne_png_data_26:
 undyne_png_data_27:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 14 of the same entries follow
-    ldi r18, 6
+    ldi r18, 7
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 9 of the same entries follow
     ldi r18, 3
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -902,28 +891,30 @@ undyne_png_data_28:
 ; 15 of the same entries follow
     ldi r18, 7
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 9 of the same entries follow
     ldi r18, 3
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -935,34 +926,32 @@ undyne_png_data_28:
 undyne_png_data_29:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 16 of the same entries follow
-    ldi r18, 7
+    ldi r18, 8
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 11 of the same entries follow
-    ldi r18, 4
+    ldi r18, 5
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -978,6 +967,8 @@ undyne_png_data_30:
 ; 18 of the same entries follow
     ldi r18, 9
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -992,8 +983,9 @@ undyne_png_data_30:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 10 of the same entries follow
-    ldi r18, 3
+    ldi r18, 4
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -1017,6 +1009,8 @@ undyne_png_data_31:
 ; 21 of the same entries follow
     ldi r18, 11
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1029,13 +1023,10 @@ undyne_png_data_31:
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1059,17 +1050,15 @@ undyne_png_data_31:
 undyne_png_data_32:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 17 of the same entries follow
-    ldi r18, 8
+    ldi r18, 9
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -1078,11 +1067,9 @@ undyne_png_data_32:
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -1094,12 +1081,11 @@ undyne_png_data_32:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -1108,25 +1094,23 @@ undyne_png_data_32:
 undyne_png_data_33:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 16 of the same entries follow
-    ldi r18, 7
+    ldi r18, 8
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -1144,12 +1128,11 @@ undyne_png_data_33:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -1158,48 +1141,40 @@ undyne_png_data_33:
 undyne_png_data_34:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 16 of the same entries follow
-    ldi r18, 7
+    ldi r18, 8
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -1208,14 +1183,13 @@ undyne_png_data_34:
 undyne_png_data_35:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 16 of the same entries follow
-    ldi r18, 7
+    ldi r18, 8
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1223,22 +1197,25 @@ undyne_png_data_35:
 ; 9 of the same entries follow
     ldi r18, 3
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 9 of the same entries follow
     ldi r18, 3
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -1247,37 +1224,40 @@ undyne_png_data_35:
 undyne_png_data_36:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 16 of the same entries follow
-    ldi r18, 7
+    ldi r18, 8
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 9 of the same entries follow
     ldi r18, 3
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 9 of the same entries follow
     ldi r18, 3
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -1286,14 +1266,13 @@ undyne_png_data_36:
 undyne_png_data_37:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 16 of the same entries follow
-    ldi r18, 7
+    ldi r18, 8
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1301,29 +1280,23 @@ undyne_png_data_37:
 ; 9 of the same entries follow
     ldi r18, 3
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -1334,36 +1307,27 @@ undyne_png_data_38:
 ; 15 of the same entries follow
     ldi r18, 7
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -1371,11 +1335,9 @@ undyne_png_data_38:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -1386,6 +1348,8 @@ undyne_png_data_39:
 ; 18 of the same entries follow
     ldi r18, 9
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1395,24 +1359,18 @@ undyne_png_data_39:
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -1431,7 +1389,7 @@ undyne_png_data_39:
 undyne_png_data_40:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 14 of the same entries follow
-    ldi r18, 6
+    ldi r18, 7
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1439,12 +1397,11 @@ undyne_png_data_40:
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -1452,31 +1409,25 @@ undyne_png_data_40:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -1487,28 +1438,14 @@ undyne_png_data_41:
 ; 18 of the same entries follow
     ldi r18, 9
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1518,9 +1455,22 @@ undyne_png_data_41:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1532,7 +1482,14 @@ undyne_png_data_41:
 undyne_png_data_42:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 14 of the same entries follow
-    ldi r18, 6
+    ldi r18, 7
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1540,26 +1497,11 @@ undyne_png_data_42:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1573,21 +1515,19 @@ undyne_png_data_42:
 undyne_png_data_43:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1608,12 +1548,11 @@ undyne_png_data_43:
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1627,54 +1566,48 @@ undyne_png_data_43:
 undyne_png_data_44:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
+    rcall delay_loop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     ret
 
 ; line 45
@@ -1682,15 +1615,15 @@ undyne_png_data_44:
 undyne_png_data_45:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1716,12 +1649,11 @@ undyne_png_data_45:
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -1730,14 +1662,13 @@ undyne_png_data_45:
 undyne_png_data_46:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1765,6 +1696,8 @@ undyne_png_data_46:
 ; 9 of the same entries follow
     ldi r18, 3
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -1773,14 +1706,13 @@ undyne_png_data_46:
 undyne_png_data_47:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1788,32 +1720,27 @@ undyne_png_data_47:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 10 of the same entries follow
-    ldi r18, 3
+    ldi r18, 4
+    rcall delay_loop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     ret
 
 ; line 48
@@ -1821,14 +1748,13 @@ undyne_png_data_47:
 undyne_png_data_48:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1842,25 +1768,22 @@ undyne_png_data_48:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 11 of the same entries follow
-    ldi r18, 4
+    ldi r18, 5
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     ret
 
 ; line 49
@@ -1870,47 +1793,42 @@ undyne_png_data_49:
 ; 12 of the same entries follow
     ldi r18, 5
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
 ; 9 of the same entries follow
     ldi r18, 3
     rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     ret
 
 ; line 50
@@ -1920,6 +1838,8 @@ undyne_png_data_50:
 ; 12 of the same entries follow
     ldi r18, 5
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1935,21 +1855,18 @@ undyne_png_data_50:
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
 ; 20 of the same entries follow
-    ldi r18, 10
+    ldi r18, 11
     rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     ret
 
 ; line 51
@@ -1959,6 +1876,8 @@ undyne_png_data_51:
 ; 12 of the same entries follow
     ldi r18, 5
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -1974,21 +1893,18 @@ undyne_png_data_51:
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
 ; 20 of the same entries follow
-    ldi r18, 10
+    ldi r18, 11
     rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     ret
 
 ; line 52
@@ -1998,13 +1914,14 @@ undyne_png_data_52:
 ; 12 of the same entries follow
     ldi r18, 5
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -2013,20 +1930,13 @@ undyne_png_data_52:
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -2038,12 +1948,11 @@ undyne_png_data_52:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -2052,26 +1961,20 @@ undyne_png_data_52:
 undyne_png_data_53:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
+    rcall delay_loop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -2092,13 +1995,10 @@ undyne_png_data_53:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -2109,6 +2009,8 @@ undyne_png_data_54:
 ; 12 of the same entries follow
     ldi r18, 5
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2165,6 +2067,8 @@ undyne_png_data_55:
 ; 12 of the same entries follow
     ldi r18, 5
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -2181,23 +2085,15 @@ undyne_png_data_55:
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -2221,6 +2117,8 @@ undyne_png_data_56:
 ; 12 of the same entries follow
     ldi r18, 5
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -2234,15 +2132,15 @@ undyne_png_data_56:
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
 ; 12 of the same entries follow
     ldi r18, 5
     rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -2252,11 +2150,9 @@ undyne_png_data_56:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -2267,6 +2163,8 @@ undyne_png_data_57:
 ; 12 of the same entries follow
     ldi r18, 5
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2281,37 +2179,29 @@ undyne_png_data_57:
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -2320,7 +2210,7 @@ undyne_png_data_57:
 undyne_png_data_58:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 11 of the same entries follow
-    ldi r18, 4
+    ldi r18, 5
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2338,20 +2228,13 @@ undyne_png_data_58:
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -2375,7 +2258,7 @@ undyne_png_data_58:
 undyne_png_data_59:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 11 of the same entries follow
-    ldi r18, 4
+    ldi r18, 5
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2398,14 +2281,9 @@ undyne_png_data_59:
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2423,30 +2301,27 @@ undyne_png_data_59:
 undyne_png_data_60:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 11 of the same entries follow
-    ldi r18, 4
+    ldi r18, 5
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 17 of the same entries follow
-    ldi r18, 8
+    ldi r18, 9
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2460,30 +2335,21 @@ undyne_png_data_61:
 ; 12 of the same entries follow
     ldi r18, 5
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -2491,12 +2357,18 @@ undyne_png_data_61:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
@@ -2506,19 +2378,17 @@ undyne_png_data_61:
 undyne_png_data_62:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 10 of the same entries follow
-    ldi r18, 3
+    ldi r18, 4
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -2555,27 +2425,22 @@ undyne_png_data_62:
 .global undyne_png_data_63
 undyne_png_data_63:
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -2597,12 +2462,11 @@ undyne_png_data_63:
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
@@ -2611,27 +2475,19 @@ undyne_png_data_63:
 .global undyne_png_data_64
 undyne_png_data_64:
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2643,11 +2499,9 @@ undyne_png_data_64:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2667,28 +2521,25 @@ undyne_png_data_64:
 .global undyne_png_data_65
 undyne_png_data_65:
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 18 of the same entries follow
     ldi r18, 9
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2707,11 +2558,9 @@ undyne_png_data_65:
 .global undyne_png_data_66
 undyne_png_data_66:
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2721,12 +2570,14 @@ undyne_png_data_66:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 14 of the same entries follow
-    ldi r18, 6
+    ldi r18, 7
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
 ; 9 of the same entries follow
     ldi r18, 3
     rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -2753,13 +2604,16 @@ undyne_png_data_67:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 9 of the same entries follow
     ldi r18, 3
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -2784,12 +2638,13 @@ undyne_png_data_68:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 11 of the same entries follow
-    ldi r18, 4
+    ldi r18, 5
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -2817,13 +2672,16 @@ undyne_png_data_69:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 12 of the same entries follow
     ldi r18, 5
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2849,13 +2707,15 @@ undyne_png_data_70:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 14 of the same entries follow
-    ldi r18, 6
+    ldi r18, 7
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 12 of the same entries follow
     ldi r18, 5
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2882,11 +2742,15 @@ undyne_png_data_71:
 ; 15 of the same entries follow
     ldi r18, 7
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 12 of the same entries follow
     ldi r18, 5
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2910,12 +2774,13 @@ undyne_png_data_72:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 16 of the same entries follow
-    ldi r18, 7
+    ldi r18, 8
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 11 of the same entries follow
-    ldi r18, 4
+    ldi r18, 5
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -2941,15 +2806,15 @@ undyne_png_data_73:
 ; 18 of the same entries follow
     ldi r18, 9
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2974,18 +2839,13 @@ undyne_png_data_74:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 20 of the same entries follow
-    ldi r18, 10
+    ldi r18, 11
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -3008,6 +2868,8 @@ undyne_png_data_75:
 ; 21 of the same entries follow
     ldi r18, 11
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -3037,7 +2899,7 @@ undyne_png_data_76:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 23 of the same entries follow
-    ldi r18, 12
+    ldi r18, 13
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -3067,17 +2929,17 @@ undyne_png_data_77:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 22 of the same entries follow
-    ldi r18, 11
+    ldi r18, 12
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -3097,18 +2959,15 @@ undyne_png_data_78:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 23 of the same entries follow
-    ldi r18, 12
+    ldi r18, 13
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -3128,15 +2987,15 @@ undyne_png_data_79:
 ; 24 of the same entries follow
     ldi r18, 13
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -3153,18 +3012,16 @@ undyne_png_data_80:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 25 of the same entries follow
-    ldi r18, 13
+    ldi r18, 14
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -3181,6 +3038,8 @@ undyne_png_data_81:
 ; 27 of the same entries follow
     ldi r18, 15
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -3206,13 +3065,13 @@ undyne_png_data_82:
 ; 27 of the same entries follow
     ldi r18, 15
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -3231,6 +3090,8 @@ undyne_png_data_83:
 ; 27 of the same entries follow
     ldi r18, 15
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -3255,6 +3116,8 @@ undyne_png_data_84:
 ; 27 of the same entries follow
     ldi r18, 15
     rcall delay_loop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -3266,12 +3129,11 @@ undyne_png_data_84:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -3280,27 +3142,22 @@ undyne_png_data_84:
 undyne_png_data_85:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 26 of the same entries follow
-    ldi r18, 14
+    ldi r18, 15
     rcall delay_loop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -3309,25 +3166,22 @@ undyne_png_data_85:
 undyne_png_data_86:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 22 of the same entries follow
-    ldi r18, 11
+    ldi r18, 12
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
 ; 10 of the same entries follow
+    ldi r18, 4
+    rcall delay_loop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
     ldi r18, 3
     rcall delay_loop
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
@@ -3336,12 +3190,14 @@ undyne_png_data_86:
 undyne_png_data_87:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 22 of the same entries follow
-    ldi r18, 11
+    ldi r18, 12
     rcall delay_loop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
-    ldi r18, 5
+    ldi r18, 6
     rcall delay_loop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -3350,6 +3206,8 @@ undyne_png_data_87:
 ; 9 of the same entries follow
     ldi r18, 3
     rcall delay_loop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 

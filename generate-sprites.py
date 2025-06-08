@@ -82,15 +82,25 @@ class Formatter:
         else:
             yield from self._no_compress_line(line, min_run_length)
 
+    # ldi = 1 cycle
+    # rcall = 3 cycles
+    # ret = 4 cycles
+    #
+    # loop itself:
+    # dec = 1
+    # brne (n - 1 iterations) = 2
+    # brne (last iteration) = 1
+    #
+    # so, total cycles: 8 + ((n - 1) * 3) + 2 = 8 + 3n - 3 + 2 = 3n + 7
+    # minimum loops: 3 * 1 + 7 = 10
+
+    def _calculate_delay_counter_value(self, x) -> (int, int):
+        val = x - 7
+        rem = val % 3
+        return (val // 3, rem)
+
     def add_source_entry(self, sprite: SpriteProto) -> []:
-        # 3 instructions inside delay loop and then 9 cycles for lds, function call & return
-        def calculate_delay_counter_value(x) -> (int, int):
-            val = x - 9
-            rem = val % 3
-
-            return (val // 3, rem)
-
-        min_following_loops = 9
+        min_delay_loops = 10
         collected_identifiers = []
 
         for y in range(sprite.height):
@@ -104,13 +114,13 @@ class Formatter:
 
             collected_identifiers.append(line_identifier)
 
-            for value, following in self._line_compressor(line, min_following_loops):
+            for value, following in self._line_compressor(line, min_delay_loops // 2): # each cbi / sbi takes 2 cycles
                 command = 'sbi' if value > 127 else 'cbi'
                 self.out(f'    {command} _SFR_IO_ADDR({VIDEO_BIT_PORT}), {VIDEO_BIT_PIN}', correct_indent=False)
 
                 if following > 0:
                     num_cycles_to_burn = following * 2 # each cbi / sbi takes 2 cycles
-                    num_delay_loops, rem = calculate_delay_counter_value(num_cycles_to_burn)
+                    num_delay_loops, rem = self._calculate_delay_counter_value(num_cycles_to_burn)
 
                     self.out(f'; {following} of the same entries follow')
                     self.out(f'    ldi r18, {num_delay_loops}\n    rcall delay_loop', correct_indent=False)
