@@ -4,11 +4,19 @@
 
 .text
 
-.global elephant_png_data
-elephant_png_data:
+.global annoying_dog_1_png_data
+annoying_dog_1_png_data:
 ; row 0
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -24,6 +32,14 @@ elephant_png_data:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 ; row 1
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -42,8 +58,16 @@ elephant_png_data:
     ret
 ; row 2
     cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -61,6 +85,14 @@ elephant_png_data:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -76,9 +108,17 @@ elephant_png_data:
     ret
 ; row 4
     cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -93,7 +133,15 @@ elephant_png_data:
     ret
 ; row 5
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -110,12 +158,20 @@ elephant_png_data:
     ret
 ; row 6
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -127,27 +183,37 @@ elephant_png_data:
     ret
 ; row 7
     cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 ; row 8
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -156,130 +222,267 @@ elephant_png_data:
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 ; row 9
     cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 ; row 10
     cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 ; row 11
     cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 ; row 12
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 ; row 13
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 ; row 14
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 15
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-.global snake_png_data
-snake_png_data:
+; row 15
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+; row 16
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+; row 17
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+; row 18
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+.global annoying_dog_2_png_data
+annoying_dog_2_png_data:
 ; row 0
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -290,9 +493,17 @@ snake_png_data:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -300,75 +511,114 @@ snake_png_data:
 ; row 1
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 ; row 2
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 ; row 3
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 ; row 4
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
     ret
 ; row 5
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -377,23 +627,32 @@ snake_png_data:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 ; row 6
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -401,16 +660,24 @@ snake_png_data:
     ret
 ; row 7
     cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -418,16 +685,24 @@ snake_png_data:
     ret
 ; row 8
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -435,16 +710,24 @@ snake_png_data:
     ret
 ; row 9
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -452,16 +735,24 @@ snake_png_data:
     ret
 ; row 10
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -469,16 +760,24 @@ snake_png_data:
     ret
 ; row 11
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -486,16 +785,24 @@ snake_png_data:
     ret
 ; row 12
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -503,16 +810,24 @@ snake_png_data:
     ret
 ; row 13
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -521,9 +836,17 @@ snake_png_data:
 ; row 14
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -538,43 +861,35 @@ snake_png_data:
 ; row 15
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-.global monke_png_data
-monke_png_data:
-; row 0
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; row 16
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -585,32 +900,6 @@ monke_png_data:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -619,319 +908,19 @@ monke_png_data:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 1
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 2
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 3
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+; row 17
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 4
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 5
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -944,649 +933,24 @@ monke_png_data:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 6
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+; row 18
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 8
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 9
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 10
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 11
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 12
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 13
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 14
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 15
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7

@@ -1,9 +1,10 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
-#include <string.h>
 
+#include "generated-sprites.h"
 #include "video.h"
+#include "util.h"
 
 // on 12Mhz, we can run 12 instructions per 1us.
 // PAL scanline is 64 us.
@@ -16,24 +17,35 @@
 // so we can output 4 pixels per us.
 // so that's around 200 pixels?
 
-extern struct sprite my_sprite_list[2];
+struct sprite key_frames[] = {
+    { .y = 100, .proto = &annoying_dog_1_png_proto},
+    { .y = 100, .proto = &annoying_dog_2_png_proto},
+};
 
 int main() {
     DDRD = 0xff;
 
     DDRB |= (1 << PIN2);
+
     setup_video();
     sei();
 
+    uint8_t index = 0;
+    uint8_t counter = 0;
+
     while (1) {
         video_wait_v_blank();
-        my_sprite_list[0].y++;
-        if (my_sprite_list[0].y > 100) {
-            my_sprite_list[0].y = 16;
-        }
 
         PORTB |= (1 << PIN2);
-        build_jumptable();
+
+        prepare_draw_call(&key_frames[index % ARRAY_SIZE(key_frames)], 1);
+
+        counter++;
+        if (counter > 6) {
+            counter = 0;
+            index++;
+        }
+
         PORTB &= ~(1 << PIN2);
         video_wait_frame_start();
     }

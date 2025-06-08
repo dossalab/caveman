@@ -16,4 +16,4 @@ void setup_video();
 
 void video_wait_v_blank();
 void video_wait_frame_start();
-void build_jumptable();
+void prepare_draw_call(const struct sprite *sprites, uint8_t len);

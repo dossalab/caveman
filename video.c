@@ -3,9 +3,10 @@
 
 #include "video.h"
 #include "video-internal.h"
-#include "generated-sprites.h"
 #include <stdbool.h>
+#include <string.h>
 #include <util/delay.h>
+#include "util.h"
 
 // 312 full, 2 blank lines (see below)
 #define NORMAL_SCANLINES 310
@@ -19,6 +20,7 @@ struct generator_state {
     uint8_t current_sprite;
     uint8_t sprite_line_counter;
     uint16_t video_line_counter;
+    const struct sprite *sprites;
 
     struct {
         uint8_t is_v_blank;
@@ -34,7 +36,8 @@ static struct generator_state g_state = {
     .status_bits = {
         .is_v_blank = 0,
         .waiting_h_sync = 0,
-    }
+    },
+    .sprites = NULL
 };
 
 // Note that the actual value used in calculations should be +1
@@ -44,20 +47,14 @@ static struct generator_state g_state = {
 // 2 scanlines
 #define OCR_VALUE_BLANK (192 + OCR_VALUE_SYNC_BACKPORCH)
 
-struct sprite my_sprite_list[] = {
-    { .y = 50, .proto = &elephant_png_proto },
-    { .y = 200, .proto = &monke_png_proto },
-    { .y = 260, .proto = &snake_png_proto },
-};
-
-#define ARRAY_SIZE(x) (sizeof(x) / sizeof(x[0]))
-
-void build_jumptable()
+// This really has to be atomic. There is a good chance though that this entire routine executes before the interrupt fires again
+// Let's hope that's the case
+void prepare_draw_call(const struct sprite *sprites, uint8_t len)
 {
     uint8_t sprite_list_insert_position = 0;
     for (uint16_t line = NORMAL_SCANLINES - 1;; line--) {
-        for (uint8_t i = 0; i < ARRAY_SIZE(my_sprite_list); i++) {
-            struct sprite *sprite = &my_sprite_list[i];
+        for (uint8_t i = 0; i < len; i++) {
+            const struct sprite *sprite = &sprites[i];
 
             if (line == sprite->y) {
                 g_state.sprite_list[sprite_list_insert_position++] = i;
@@ -72,6 +69,7 @@ void build_jumptable()
     // terminate the list
     g_state.sprite_list[sprite_list_insert_position] = SPRITE_LIST_POISON;
     g_state.current_sprite = 0;
+    g_state.sprites = sprites;
 }
 
 ISR(TIMER2_COMP_vect)  {
@@ -101,17 +99,16 @@ ISR(TIMER2_COMP_vect)  {
     // Assumption - called function does not use any registers
     g_state.video_line_counter--;
 
+    barrier();
     uint8_t sprite_table_index = g_state.sprite_list[g_state.current_sprite];
 
     if (sprite_table_index != SPRITE_LIST_POISON) {
-        struct sprite *s = &my_sprite_list[sprite_table_index];
+        barrier();
+        const struct sprite *s = &g_state.sprites[sprite_table_index];
         const struct sprite_proto *proto = s->proto;
 
         if (g_state.video_line_counter <= s->y && g_state.sprite_line_counter < proto->height) {
             uint16_t *call_address = proto->data_start + g_state.sprite_line_counter * proto->stride;
-
-            // XXX: why barrier is needed here?
-            asm volatile ("" ::: "memory");
 
             asm __volatile__ (
                 "icall\n\t"
@@ -158,7 +155,7 @@ void setup_video(void)
 void video_wait_v_blank()
 {
     while (!g_state.status_bits.is_v_blank) {
-        asm volatile ("" ::: "memory");
+        barrier();
         ;;
     }
 }
@@ -166,7 +163,7 @@ void video_wait_v_blank()
 void video_wait_frame_start()
 {
     while (g_state.status_bits.is_v_blank) {
-        asm volatile ("" ::: "memory");
+        barrier();
         ;;
     }
 }

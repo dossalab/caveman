@@ -10,9 +10,8 @@ all: build-asm-helpers
 build-asm-helpers:
 	python generate-sprites.py \
 		--basedir sprites \
-		--input elephant.png \
-		--input snake.png \
-		--input monke.png
+		--input annoying_dog_1.png \
+		--input annoying_dog_2.png
 
 flash: all
 	avrdude -c ${AVRDUDE_PROGRAMMER} -p m8 -v -U flash:w:main.elf
