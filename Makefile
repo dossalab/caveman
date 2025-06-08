@@ -10,7 +10,7 @@ all: build-asm-helpers
 build-asm-helpers:
 	python generate-sprites.py \
 		--basedir sprites \
-		--input undyne.png
+		--input undyne.png --compress
 
 flash: all
 	avrdude -c ${AVRDUDE_PROGRAMMER} -p m8 -v -U flash:w:main.elf

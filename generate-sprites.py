@@ -24,8 +24,9 @@ def is_even(n):
     return n % 2 == 0
 
 class Formatter:
-    def __init__(self, file):
+    def __init__(self, file, compress=False):
         self.file = file
+        self.compress = compress
 
     def out(self, a: str, correct_indent=True):
         print(dedent(a) if correct_indent else a, file=self.file)
@@ -49,7 +50,7 @@ class Formatter:
             }};
             ''')
 
-    def _compress_line(self, line: [], min_run_length):
+    def _compress_line(self, line: [], min_following):
         current = line[0]
         following = 0
 
@@ -57,10 +58,11 @@ class Formatter:
             if line[x] == current:
                 following += 1
             else:
-                if following >= min_run_length:
+                if following >= min_following:
                     yield (current, following)
                 else:
-                    for _ in range(following):
+                    # Emit the value itself + following occurences
+                    for _ in range(following + 1):
                         yield (current, 0)
 
                 current = line[x]
@@ -70,58 +72,53 @@ class Formatter:
         if following > 0:
             yield (current, 0)
 
+    def _no_compress_line(self, line: [], min_run_length=0):
+        for x in range(len(line)):
+            yield((line[x], 0))
+
+    def _line_compressor(self, line: [], min_run_length):
+        if self.compress:
+            yield from self._compress_line(line, min_run_length)
+        else:
+            yield from self._no_compress_line(line, min_run_length)
+
     def add_source_entry(self, sprite: SpriteProto) -> []:
-        # 3 instructions inside delay loop and then 10 cycles for function call & return
+        # 3 instructions inside delay loop and then 9 cycles for lds, function call & return
         def calculate_delay_counter_value(x) -> (int, int):
-            val = x - 10
+            val = x - 9
             rem = val % 3
 
             return (val // 3, rem)
 
-        min_following_loops = 10
-        offset = 0
+        min_following_loops = 9
         collected_identifiers = []
 
         for y in range(sprite.height):
             line = [sprite.pixels[x, y] for x in range(sprite.width)]
-            instructions = 0
             line_identifier = f'{sprite.identifier}_data_{y}'
 
             self.out(f'''\
-                ; line {y}, offset {offset}
+                ; line {y}
                 .global {line_identifier}
                 {line_identifier}:''')
 
             collected_identifiers.append(line_identifier)
 
-            for pair in self._compress_line(line, min_following_loops):
-                value = pair[0]
-                following = pair[1]
-
+            for value, following in self._line_compressor(line, min_following_loops):
                 command = 'sbi' if value > 127 else 'cbi'
                 self.out(f'    {command} _SFR_IO_ADDR({VIDEO_BIT_PORT}), {VIDEO_BIT_PIN}', correct_indent=False)
-                instructions += 1
 
                 if following > 0:
-                    # n_delay_loops, rem = calculate_delay_counter_value(following)
-                    # self.out(f'; {following} of the same entries follow')
-                    # self.out(f'    ldi r18, {n_delay_loops}\n    rcall delay_loop', correct_indent=False)
-                    # instructions += 2
-                    rem = following
+                    num_cycles_to_burn = following * 2 # each cbi / sbi takes 2 cycles
+                    num_delay_loops, rem = calculate_delay_counter_value(num_cycles_to_burn)
+
+                    self.out(f'; {following} of the same entries follow')
+                    self.out(f'    ldi r18, {num_delay_loops}\n    rcall delay_loop', correct_indent=False)
 
                     for _ in range(rem):
                         self.out('    nop', correct_indent=False)
-                        instructions += 1
-
-            # +1 is for ret, remember? Pad the number of instructions to make them even
-            if not is_even(instructions + 1):
-                self.out('    nop', correct_indent=False)
-                instructions += 1
 
             self.out('    ret\n', correct_indent=False)
-            instructions += 1
-
-            offset += instructions
 
         return collected_identifiers
 
@@ -154,6 +151,7 @@ def parse_args():
 
     p.add_argument('--basedir', type=str, required=True)
     p.add_argument('--input', type=str, required=True, action='append')
+    p.add_argument('--compress', action='store_true')
 
     return p.parse_args()
 
@@ -161,7 +159,7 @@ def main():
     args = parse_args()
 
     with open('generated-sprites.S', 'w') as source_file, open('generated-sprites.h', 'w') as header_file:
-        source = Formatter(source_file)
+        source = Formatter(source_file, args.compress)
         header = Formatter(header_file)
 
         source.write_source_preamble()

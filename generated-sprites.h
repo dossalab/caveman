@@ -30,6 +30,68 @@ extern void undyne_png_data_22(void);
 extern void undyne_png_data_23(void);
 extern void undyne_png_data_24(void);
 extern void undyne_png_data_25(void);
+extern void undyne_png_data_26(void);
+extern void undyne_png_data_27(void);
+extern void undyne_png_data_28(void);
+extern void undyne_png_data_29(void);
+extern void undyne_png_data_30(void);
+extern void undyne_png_data_31(void);
+extern void undyne_png_data_32(void);
+extern void undyne_png_data_33(void);
+extern void undyne_png_data_34(void);
+extern void undyne_png_data_35(void);
+extern void undyne_png_data_36(void);
+extern void undyne_png_data_37(void);
+extern void undyne_png_data_38(void);
+extern void undyne_png_data_39(void);
+extern void undyne_png_data_40(void);
+extern void undyne_png_data_41(void);
+extern void undyne_png_data_42(void);
+extern void undyne_png_data_43(void);
+extern void undyne_png_data_44(void);
+extern void undyne_png_data_45(void);
+extern void undyne_png_data_46(void);
+extern void undyne_png_data_47(void);
+extern void undyne_png_data_48(void);
+extern void undyne_png_data_49(void);
+extern void undyne_png_data_50(void);
+extern void undyne_png_data_51(void);
+extern void undyne_png_data_52(void);
+extern void undyne_png_data_53(void);
+extern void undyne_png_data_54(void);
+extern void undyne_png_data_55(void);
+extern void undyne_png_data_56(void);
+extern void undyne_png_data_57(void);
+extern void undyne_png_data_58(void);
+extern void undyne_png_data_59(void);
+extern void undyne_png_data_60(void);
+extern void undyne_png_data_61(void);
+extern void undyne_png_data_62(void);
+extern void undyne_png_data_63(void);
+extern void undyne_png_data_64(void);
+extern void undyne_png_data_65(void);
+extern void undyne_png_data_66(void);
+extern void undyne_png_data_67(void);
+extern void undyne_png_data_68(void);
+extern void undyne_png_data_69(void);
+extern void undyne_png_data_70(void);
+extern void undyne_png_data_71(void);
+extern void undyne_png_data_72(void);
+extern void undyne_png_data_73(void);
+extern void undyne_png_data_74(void);
+extern void undyne_png_data_75(void);
+extern void undyne_png_data_76(void);
+extern void undyne_png_data_77(void);
+extern void undyne_png_data_78(void);
+extern void undyne_png_data_79(void);
+extern void undyne_png_data_80(void);
+extern void undyne_png_data_81(void);
+extern void undyne_png_data_82(void);
+extern void undyne_png_data_83(void);
+extern void undyne_png_data_84(void);
+extern void undyne_png_data_85(void);
+extern void undyne_png_data_86(void);
+extern void undyne_png_data_87(void);
 
 void (*undyne_png_line_table[])(void) = {
     undyne_png_data_0,
@@ -58,12 +120,74 @@ void (*undyne_png_line_table[])(void) = {
     undyne_png_data_23,
     undyne_png_data_24,
     undyne_png_data_25,
+    undyne_png_data_26,
+    undyne_png_data_27,
+    undyne_png_data_28,
+    undyne_png_data_29,
+    undyne_png_data_30,
+    undyne_png_data_31,
+    undyne_png_data_32,
+    undyne_png_data_33,
+    undyne_png_data_34,
+    undyne_png_data_35,
+    undyne_png_data_36,
+    undyne_png_data_37,
+    undyne_png_data_38,
+    undyne_png_data_39,
+    undyne_png_data_40,
+    undyne_png_data_41,
+    undyne_png_data_42,
+    undyne_png_data_43,
+    undyne_png_data_44,
+    undyne_png_data_45,
+    undyne_png_data_46,
+    undyne_png_data_47,
+    undyne_png_data_48,
+    undyne_png_data_49,
+    undyne_png_data_50,
+    undyne_png_data_51,
+    undyne_png_data_52,
+    undyne_png_data_53,
+    undyne_png_data_54,
+    undyne_png_data_55,
+    undyne_png_data_56,
+    undyne_png_data_57,
+    undyne_png_data_58,
+    undyne_png_data_59,
+    undyne_png_data_60,
+    undyne_png_data_61,
+    undyne_png_data_62,
+    undyne_png_data_63,
+    undyne_png_data_64,
+    undyne_png_data_65,
+    undyne_png_data_66,
+    undyne_png_data_67,
+    undyne_png_data_68,
+    undyne_png_data_69,
+    undyne_png_data_70,
+    undyne_png_data_71,
+    undyne_png_data_72,
+    undyne_png_data_73,
+    undyne_png_data_74,
+    undyne_png_data_75,
+    undyne_png_data_76,
+    undyne_png_data_77,
+    undyne_png_data_78,
+    undyne_png_data_79,
+    undyne_png_data_80,
+    undyne_png_data_81,
+    undyne_png_data_82,
+    undyne_png_data_83,
+    undyne_png_data_84,
+    undyne_png_data_85,
+    undyne_png_data_86,
+    undyne_png_data_87,
 
 };
 
 const struct sprite_proto undyne_png_proto = {
     .width = 61,
-    .height = 26,
+    .height = 88,
     .line_table = undyne_png_line_table
 };
 
