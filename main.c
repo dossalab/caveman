@@ -18,8 +18,8 @@
 // so that's around 200 pixels?
 
 struct sprite key_frames[] = {
-    { .y = 100, .proto = &annoying_dog_1_png_proto},
-    { .y = 100, .proto = &annoying_dog_2_png_proto},
+    { .y = 100, .proto = &undyne_png_proto},
+    // { .y = 100, .proto = &annoying_dog_2_png_proto},
 };
 
 int main() {

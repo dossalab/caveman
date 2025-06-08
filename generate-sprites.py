@@ -30,31 +30,100 @@ class Formatter:
     def out(self, a: str, correct_indent=True):
         print(dedent(a) if correct_indent else a, file=self.file)
 
-    def add_header_entry(self, sprite: SpriteProto):
-        self.out(f'''\
-            extern void {sprite.identifier}_data(void);
+    def add_header_entry(self, sprite: SpriteProto, identifiers: []):
+        for identifier in identifiers:
+            self.out(f'extern void {identifier}(void);', correct_indent=False)
+        
+        self.out(f'\nvoid (*{sprite.identifier}_line_table[])(void) = {{')
+
+        for identifier in identifiers:
+            self.out(f'    {identifier},', correct_indent=False)
+
+        self.out(f'''
+            }};
+
             const struct sprite_proto {sprite.identifier}_proto = {{
                 .width = {sprite.width},
                 .height = {sprite.height},
-                .stride = {(sprite.width + 1) // 2},
-                .data_start = (uint16_t*){sprite.identifier}_data
+                .line_table = {sprite.identifier}_line_table
             }};
             ''')
 
-    def add_source_entry(self, sprite: SpriteProto):
-        self.out(f'''\
-            .global {sprite.identifier}_data
-            {sprite.identifier}_data:''')
+    def _compress_line(self, line: [], min_run_length):
+        current = line[0]
+        following = 0
+
+        for x in range(1, len(line)):
+            if line[x] == current:
+                following += 1
+            else:
+                if following >= min_run_length:
+                    yield (current, following)
+                else:
+                    for _ in range(following):
+                        yield (current, 0)
+
+                current = line[x]
+                following = 0
+
+        # we don't care about the reminder as it's the end of scanline. Just yield the last value
+        if following > 0:
+            yield (current, 0)
+
+    def add_source_entry(self, sprite: SpriteProto) -> []:
+        # 3 instructions inside delay loop and then 10 cycles for function call & return
+        def calculate_delay_counter_value(x) -> (int, int):
+            val = x - 10
+            rem = val % 3
+
+            return (val // 3, rem)
+
+        min_following_loops = 10
+        offset = 0
+        collected_identifiers = []
 
         for y in range(sprite.height):
-            self.out(f'; row {y}')
+            line = [sprite.pixels[x, y] for x in range(sprite.width)]
+            instructions = 0
+            line_identifier = f'{sprite.identifier}_data_{y}'
 
-            for x in range(sprite.width):
-                # clear or set bit depending on our pixel value
-                command = 'sbi' if sprite.pixels[x, y] > 127 else 'cbi'
+            self.out(f'''\
+                ; line {y}, offset {offset}
+                .global {line_identifier}
+                {line_identifier}:''')
+
+            collected_identifiers.append(line_identifier)
+
+            for pair in self._compress_line(line, min_following_loops):
+                value = pair[0]
+                following = pair[1]
+
+                command = 'sbi' if value > 127 else 'cbi'
                 self.out(f'    {command} _SFR_IO_ADDR({VIDEO_BIT_PORT}), {VIDEO_BIT_PIN}', correct_indent=False)
+                instructions += 1
 
-            self.out('    ret', correct_indent=False)
+                if following > 0:
+                    # n_delay_loops, rem = calculate_delay_counter_value(following)
+                    # self.out(f'; {following} of the same entries follow')
+                    # self.out(f'    ldi r18, {n_delay_loops}\n    rcall delay_loop', correct_indent=False)
+                    # instructions += 2
+                    rem = following
+
+                    for _ in range(rem):
+                        self.out('    nop', correct_indent=False)
+                        instructions += 1
+
+            # +1 is for ret, remember? Pad the number of instructions to make them even
+            if not is_even(instructions + 1):
+                self.out('    nop', correct_indent=False)
+                instructions += 1
+
+            self.out('    ret\n', correct_indent=False)
+            instructions += 1
+
+            offset += instructions
+
+        return collected_identifiers
 
     def write_source_preamble(self):
         self.out('''\
@@ -63,6 +132,12 @@ class Formatter:
             #include <avr/io.h>
 
             .text
+
+            ; Input: r18 = N (delay loops)
+            delay_loop:
+                dec r18
+                brne delay_loop
+                ret
             ''')
 
     def write_header_preamble(self):
@@ -92,6 +167,8 @@ def main():
         source.write_source_preamble()
         header.write_header_preamble()
 
+        total_sprites = 0
+
         for path in args.input:
             image = Image.open(pathjoin(args.basedir, path)).convert("L")
             width, height = image.size
@@ -107,8 +184,12 @@ def main():
                 pixels=image.load()
             )
 
-            header.add_header_entry(sprite)
-            source.add_source_entry(sprite)
+            identifiers = source.add_source_entry(sprite)
+            header.add_header_entry(sprite, identifiers)
+
+            total_sprites += 1
+
+        print(f'{total_sprites} sprites added')
 
 if __name__ == '__main__':
     main()

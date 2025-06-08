@@ -95,8 +95,6 @@ ISR(TIMER2_COMP_vect)  {
     g_state.status_bits.is_v_blank = false;
     g_state.status_bits.waiting_h_sync = 1;
 
-    // GCC hates a function call here, which sucks. We can still do it in asm, though. We just need a correct address
-    // Assumption - called function does not use any registers
     g_state.video_line_counter--;
 
     barrier();
@@ -108,17 +106,19 @@ ISR(TIMER2_COMP_vect)  {
         const struct sprite_proto *proto = s->proto;
 
         if (g_state.video_line_counter <= s->y && g_state.sprite_line_counter < proto->height) {
-            uint16_t *call_address = proto->data_start + g_state.sprite_line_counter * proto->stride;
+            void *call_address = proto->line_table[ g_state.sprite_line_counter];
 
+            // GCC hates a function call here, which sucks. We can still do it in asm, though. We just need a correct address
+            // Assumption - called function does not use any registers (edit - allow r18 for counters)
             asm __volatile__ (
                 "icall\n\t"
-                :: [addr] "z" (call_address)
+                :: [addr] "z" (call_address) : "r18"
             );
             PORTD = 0;
             g_state.sprite_line_counter++;
 
             // end of drawing, go to next sprite
-            if (g_state.sprite_line_counter == proto->height) {
+            if (g_state.sprite_line_counter >= proto->height) {
                 g_state.current_sprite++;
                 g_state.sprite_line_counter = 0;
             }

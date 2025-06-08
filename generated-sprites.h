@@ -4,19 +4,66 @@
 
 #include "video.h"
 
-extern void annoying_dog_1_png_data(void);
-const struct sprite_proto annoying_dog_1_png_proto = {
-    .width = 23,
-    .height = 19,
-    .stride = 12,
-    .data_start = (uint16_t*)annoying_dog_1_png_data
+extern void undyne_png_data_0(void);
+extern void undyne_png_data_1(void);
+extern void undyne_png_data_2(void);
+extern void undyne_png_data_3(void);
+extern void undyne_png_data_4(void);
+extern void undyne_png_data_5(void);
+extern void undyne_png_data_6(void);
+extern void undyne_png_data_7(void);
+extern void undyne_png_data_8(void);
+extern void undyne_png_data_9(void);
+extern void undyne_png_data_10(void);
+extern void undyne_png_data_11(void);
+extern void undyne_png_data_12(void);
+extern void undyne_png_data_13(void);
+extern void undyne_png_data_14(void);
+extern void undyne_png_data_15(void);
+extern void undyne_png_data_16(void);
+extern void undyne_png_data_17(void);
+extern void undyne_png_data_18(void);
+extern void undyne_png_data_19(void);
+extern void undyne_png_data_20(void);
+extern void undyne_png_data_21(void);
+extern void undyne_png_data_22(void);
+extern void undyne_png_data_23(void);
+extern void undyne_png_data_24(void);
+extern void undyne_png_data_25(void);
+
+void (*undyne_png_line_table[])(void) = {
+    undyne_png_data_0,
+    undyne_png_data_1,
+    undyne_png_data_2,
+    undyne_png_data_3,
+    undyne_png_data_4,
+    undyne_png_data_5,
+    undyne_png_data_6,
+    undyne_png_data_7,
+    undyne_png_data_8,
+    undyne_png_data_9,
+    undyne_png_data_10,
+    undyne_png_data_11,
+    undyne_png_data_12,
+    undyne_png_data_13,
+    undyne_png_data_14,
+    undyne_png_data_15,
+    undyne_png_data_16,
+    undyne_png_data_17,
+    undyne_png_data_18,
+    undyne_png_data_19,
+    undyne_png_data_20,
+    undyne_png_data_21,
+    undyne_png_data_22,
+    undyne_png_data_23,
+    undyne_png_data_24,
+    undyne_png_data_25,
+
 };
 
-extern void annoying_dog_2_png_data(void);
-const struct sprite_proto annoying_dog_2_png_proto = {
-    .width = 23,
-    .height = 19,
-    .stride = 12,
-    .data_start = (uint16_t*)annoying_dog_2_png_data
+const struct sprite_proto undyne_png_proto = {
+    .width = 61,
+    .height = 26,
+    .line_table = undyne_png_line_table
 };
 

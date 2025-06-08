@@ -3,8 +3,8 @@
 #include <stdint.h>
 
 struct sprite_proto {
-    uint8_t width, height, stride;
-    uint16_t *data_start;
+    uint8_t width, height;
+    void (**line_table)(void);
 };
 
 struct sprite {

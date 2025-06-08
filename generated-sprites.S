@@ -4,957 +4,1245 @@
 
 .text
 
-.global annoying_dog_1_png_data
-annoying_dog_1_png_data:
-; row 0
+; Input: r18 = N (delay loops)
+delay_loop:
+    dec r18
+    brne delay_loop
+    ret
+
+; line 0, offset 0
+.global undyne_png_data_0
+undyne_png_data_0:
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 1
+
+; line 1, offset 41
+.global undyne_png_data_1
+undyne_png_data_1:
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 2
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 3
+
+; line 2, offset 81
+.global undyne_png_data_2
+undyne_png_data_2:
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 4
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 5
+
+; line 3, offset 123
+.global undyne_png_data_3
+undyne_png_data_3:
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 6
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 7
+
+; line 4, offset 165
+.global undyne_png_data_4
+undyne_png_data_4:
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 8
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 9
+
+; line 5, offset 208
+.global undyne_png_data_5
+undyne_png_data_5:
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 10
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 11
+
+; line 6, offset 250
+.global undyne_png_data_6
+undyne_png_data_6:
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 12
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 13
+
+; line 7, offset 294
+.global undyne_png_data_7
+undyne_png_data_7:
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 14
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 15
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 16
+
+; line 8, offset 339
+.global undyne_png_data_8
+undyne_png_data_8:
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 17
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 18
+
+; line 9, offset 374
+.global undyne_png_data_9
+undyne_png_data_9:
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-.global annoying_dog_2_png_data
-annoying_dog_2_png_data:
-; row 0
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 1
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+
+; line 10, offset 410
+.global undyne_png_data_10
+undyne_png_data_10:
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 2
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 3
+
+; line 11, offset 451
+.global undyne_png_data_11
+undyne_png_data_11:
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 4
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 5
+
+; line 12, offset 495
+.global undyne_png_data_12
+undyne_png_data_12:
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 6
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 7
+
+; line 13, offset 537
+.global undyne_png_data_13
+undyne_png_data_13:
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 8
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 9
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 10
+
+; line 14, offset 583
+.global undyne_png_data_14
+undyne_png_data_14:
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 11
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 12
+
+; line 15, offset 627
+.global undyne_png_data_15
+undyne_png_data_15:
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-; row 13
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 14
+
+; line 16, offset 669
+.global undyne_png_data_16
+undyne_png_data_16:
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 15
+
+; line 17, offset 714
+.global undyne_png_data_17
+undyne_png_data_17:
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 16
+
+; line 18, offset 755
+.global undyne_png_data_18
+undyne_png_data_18:
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 17
+
+; line 19, offset 796
+.global undyne_png_data_19
+undyne_png_data_19:
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
-; row 18
+
+; line 20, offset 837
+.global undyne_png_data_20
+undyne_png_data_20:
     cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
+
+; line 21, offset 878
+.global undyne_png_data_21
+undyne_png_data_21:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 22, offset 919
+.global undyne_png_data_22
+undyne_png_data_22:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 23, offset 975
+.global undyne_png_data_23
+undyne_png_data_23:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 24, offset 1019
+.global undyne_png_data_24
+undyne_png_data_24:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 25, offset 1072
+.global undyne_png_data_25
+undyne_png_data_25:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    nop
+    ret
+
