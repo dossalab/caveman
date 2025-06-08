@@ -4,190 +4,336 @@
 
 #include "video.h"
 
-extern void undyne_png_data_0(void);
-extern void undyne_png_data_1(void);
-extern void undyne_png_data_2(void);
-extern void undyne_png_data_3(void);
-extern void undyne_png_data_4(void);
-extern void undyne_png_data_5(void);
-extern void undyne_png_data_6(void);
-extern void undyne_png_data_7(void);
-extern void undyne_png_data_8(void);
-extern void undyne_png_data_9(void);
-extern void undyne_png_data_10(void);
-extern void undyne_png_data_11(void);
-extern void undyne_png_data_12(void);
-extern void undyne_png_data_13(void);
-extern void undyne_png_data_14(void);
-extern void undyne_png_data_15(void);
-extern void undyne_png_data_16(void);
-extern void undyne_png_data_17(void);
-extern void undyne_png_data_18(void);
-extern void undyne_png_data_19(void);
-extern void undyne_png_data_20(void);
-extern void undyne_png_data_21(void);
-extern void undyne_png_data_22(void);
-extern void undyne_png_data_23(void);
-extern void undyne_png_data_24(void);
-extern void undyne_png_data_25(void);
-extern void undyne_png_data_26(void);
-extern void undyne_png_data_27(void);
-extern void undyne_png_data_28(void);
-extern void undyne_png_data_29(void);
-extern void undyne_png_data_30(void);
-extern void undyne_png_data_31(void);
-extern void undyne_png_data_32(void);
-extern void undyne_png_data_33(void);
-extern void undyne_png_data_34(void);
-extern void undyne_png_data_35(void);
-extern void undyne_png_data_36(void);
-extern void undyne_png_data_37(void);
-extern void undyne_png_data_38(void);
-extern void undyne_png_data_39(void);
-extern void undyne_png_data_40(void);
-extern void undyne_png_data_41(void);
-extern void undyne_png_data_42(void);
-extern void undyne_png_data_43(void);
-extern void undyne_png_data_44(void);
-extern void undyne_png_data_45(void);
-extern void undyne_png_data_46(void);
-extern void undyne_png_data_47(void);
-extern void undyne_png_data_48(void);
-extern void undyne_png_data_49(void);
-extern void undyne_png_data_50(void);
-extern void undyne_png_data_51(void);
-extern void undyne_png_data_52(void);
-extern void undyne_png_data_53(void);
-extern void undyne_png_data_54(void);
-extern void undyne_png_data_55(void);
-extern void undyne_png_data_56(void);
-extern void undyne_png_data_57(void);
-extern void undyne_png_data_58(void);
-extern void undyne_png_data_59(void);
-extern void undyne_png_data_60(void);
-extern void undyne_png_data_61(void);
-extern void undyne_png_data_62(void);
-extern void undyne_png_data_63(void);
-extern void undyne_png_data_64(void);
-extern void undyne_png_data_65(void);
-extern void undyne_png_data_66(void);
-extern void undyne_png_data_67(void);
-extern void undyne_png_data_68(void);
-extern void undyne_png_data_69(void);
-extern void undyne_png_data_70(void);
-extern void undyne_png_data_71(void);
-extern void undyne_png_data_72(void);
-extern void undyne_png_data_73(void);
-extern void undyne_png_data_74(void);
-extern void undyne_png_data_75(void);
-extern void undyne_png_data_76(void);
-extern void undyne_png_data_77(void);
-extern void undyne_png_data_78(void);
-extern void undyne_png_data_79(void);
-extern void undyne_png_data_80(void);
-extern void undyne_png_data_81(void);
-extern void undyne_png_data_82(void);
-extern void undyne_png_data_83(void);
-extern void undyne_png_data_84(void);
-extern void undyne_png_data_85(void);
-extern void undyne_png_data_86(void);
-extern void undyne_png_data_87(void);
+extern void undyne_head_normal_png_data_0(void);
+extern void undyne_head_normal_png_data_1(void);
+extern void undyne_head_normal_png_data_2(void);
+extern void undyne_head_normal_png_data_3(void);
+extern void undyne_head_normal_png_data_4(void);
+extern void undyne_head_normal_png_data_5(void);
+extern void undyne_head_normal_png_data_6(void);
+extern void undyne_head_normal_png_data_7(void);
+extern void undyne_head_normal_png_data_8(void);
+extern void undyne_head_normal_png_data_9(void);
+extern void undyne_head_normal_png_data_10(void);
+extern void undyne_head_normal_png_data_11(void);
+extern void undyne_head_normal_png_data_12(void);
 
-void (*undyne_png_line_table[])(void) = {
-    undyne_png_data_0,
-    undyne_png_data_1,
-    undyne_png_data_2,
-    undyne_png_data_3,
-    undyne_png_data_4,
-    undyne_png_data_5,
-    undyne_png_data_6,
-    undyne_png_data_7,
-    undyne_png_data_8,
-    undyne_png_data_9,
-    undyne_png_data_10,
-    undyne_png_data_11,
-    undyne_png_data_12,
-    undyne_png_data_13,
-    undyne_png_data_14,
-    undyne_png_data_15,
-    undyne_png_data_16,
-    undyne_png_data_17,
-    undyne_png_data_18,
-    undyne_png_data_19,
-    undyne_png_data_20,
-    undyne_png_data_21,
-    undyne_png_data_22,
-    undyne_png_data_23,
-    undyne_png_data_24,
-    undyne_png_data_25,
-    undyne_png_data_26,
-    undyne_png_data_27,
-    undyne_png_data_28,
-    undyne_png_data_29,
-    undyne_png_data_30,
-    undyne_png_data_31,
-    undyne_png_data_32,
-    undyne_png_data_33,
-    undyne_png_data_34,
-    undyne_png_data_35,
-    undyne_png_data_36,
-    undyne_png_data_37,
-    undyne_png_data_38,
-    undyne_png_data_39,
-    undyne_png_data_40,
-    undyne_png_data_41,
-    undyne_png_data_42,
-    undyne_png_data_43,
-    undyne_png_data_44,
-    undyne_png_data_45,
-    undyne_png_data_46,
-    undyne_png_data_47,
-    undyne_png_data_48,
-    undyne_png_data_49,
-    undyne_png_data_50,
-    undyne_png_data_51,
-    undyne_png_data_52,
-    undyne_png_data_53,
-    undyne_png_data_54,
-    undyne_png_data_55,
-    undyne_png_data_56,
-    undyne_png_data_57,
-    undyne_png_data_58,
-    undyne_png_data_59,
-    undyne_png_data_60,
-    undyne_png_data_61,
-    undyne_png_data_62,
-    undyne_png_data_63,
-    undyne_png_data_64,
-    undyne_png_data_65,
-    undyne_png_data_66,
-    undyne_png_data_67,
-    undyne_png_data_68,
-    undyne_png_data_69,
-    undyne_png_data_70,
-    undyne_png_data_71,
-    undyne_png_data_72,
-    undyne_png_data_73,
-    undyne_png_data_74,
-    undyne_png_data_75,
-    undyne_png_data_76,
-    undyne_png_data_77,
-    undyne_png_data_78,
-    undyne_png_data_79,
-    undyne_png_data_80,
-    undyne_png_data_81,
-    undyne_png_data_82,
-    undyne_png_data_83,
-    undyne_png_data_84,
-    undyne_png_data_85,
-    undyne_png_data_86,
-    undyne_png_data_87,
+void (*undyne_head_normal_png_line_table[])(void) = {
+    undyne_head_normal_png_data_0,
+    undyne_head_normal_png_data_1,
+    undyne_head_normal_png_data_2,
+    undyne_head_normal_png_data_3,
+    undyne_head_normal_png_data_4,
+    undyne_head_normal_png_data_5,
+    undyne_head_normal_png_data_6,
+    undyne_head_normal_png_data_7,
+    undyne_head_normal_png_data_8,
+    undyne_head_normal_png_data_9,
+    undyne_head_normal_png_data_10,
+    undyne_head_normal_png_data_11,
+    undyne_head_normal_png_data_12,
 
 };
 
-const struct sprite_proto undyne_png_proto = {
+const struct sprite_proto undyne_head_normal_png_proto = {
     .width = 61,
-    .height = 88,
-    .line_table = undyne_png_line_table
+    .height = 13,
+    .line_table = undyne_head_normal_png_line_table
+};
+
+extern void undyne_head_blink_png_data_0(void);
+extern void undyne_head_blink_png_data_1(void);
+extern void undyne_head_blink_png_data_2(void);
+extern void undyne_head_blink_png_data_3(void);
+extern void undyne_head_blink_png_data_4(void);
+extern void undyne_head_blink_png_data_5(void);
+extern void undyne_head_blink_png_data_6(void);
+extern void undyne_head_blink_png_data_7(void);
+extern void undyne_head_blink_png_data_8(void);
+extern void undyne_head_blink_png_data_9(void);
+extern void undyne_head_blink_png_data_10(void);
+extern void undyne_head_blink_png_data_11(void);
+extern void undyne_head_blink_png_data_12(void);
+
+void (*undyne_head_blink_png_line_table[])(void) = {
+    undyne_head_blink_png_data_0,
+    undyne_head_blink_png_data_1,
+    undyne_head_blink_png_data_2,
+    undyne_head_blink_png_data_3,
+    undyne_head_blink_png_data_4,
+    undyne_head_blink_png_data_5,
+    undyne_head_blink_png_data_6,
+    undyne_head_blink_png_data_7,
+    undyne_head_blink_png_data_8,
+    undyne_head_blink_png_data_9,
+    undyne_head_blink_png_data_10,
+    undyne_head_blink_png_data_11,
+    undyne_head_blink_png_data_12,
+
+};
+
+const struct sprite_proto undyne_head_blink_png_proto = {
+    .width = 61,
+    .height = 13,
+    .line_table = undyne_head_blink_png_line_table
+};
+
+extern void annoying_dog_1_png_data_0(void);
+extern void annoying_dog_1_png_data_1(void);
+extern void annoying_dog_1_png_data_2(void);
+extern void annoying_dog_1_png_data_3(void);
+extern void annoying_dog_1_png_data_4(void);
+extern void annoying_dog_1_png_data_5(void);
+extern void annoying_dog_1_png_data_6(void);
+extern void annoying_dog_1_png_data_7(void);
+extern void annoying_dog_1_png_data_8(void);
+extern void annoying_dog_1_png_data_9(void);
+extern void annoying_dog_1_png_data_10(void);
+extern void annoying_dog_1_png_data_11(void);
+extern void annoying_dog_1_png_data_12(void);
+extern void annoying_dog_1_png_data_13(void);
+extern void annoying_dog_1_png_data_14(void);
+extern void annoying_dog_1_png_data_15(void);
+extern void annoying_dog_1_png_data_16(void);
+extern void annoying_dog_1_png_data_17(void);
+extern void annoying_dog_1_png_data_18(void);
+
+void (*annoying_dog_1_png_line_table[])(void) = {
+    annoying_dog_1_png_data_0,
+    annoying_dog_1_png_data_1,
+    annoying_dog_1_png_data_2,
+    annoying_dog_1_png_data_3,
+    annoying_dog_1_png_data_4,
+    annoying_dog_1_png_data_5,
+    annoying_dog_1_png_data_6,
+    annoying_dog_1_png_data_7,
+    annoying_dog_1_png_data_8,
+    annoying_dog_1_png_data_9,
+    annoying_dog_1_png_data_10,
+    annoying_dog_1_png_data_11,
+    annoying_dog_1_png_data_12,
+    annoying_dog_1_png_data_13,
+    annoying_dog_1_png_data_14,
+    annoying_dog_1_png_data_15,
+    annoying_dog_1_png_data_16,
+    annoying_dog_1_png_data_17,
+    annoying_dog_1_png_data_18,
+
+};
+
+const struct sprite_proto annoying_dog_1_png_proto = {
+    .width = 23,
+    .height = 19,
+    .line_table = annoying_dog_1_png_line_table
+};
+
+extern void annoying_dog_2_png_data_0(void);
+extern void annoying_dog_2_png_data_1(void);
+extern void annoying_dog_2_png_data_2(void);
+extern void annoying_dog_2_png_data_3(void);
+extern void annoying_dog_2_png_data_4(void);
+extern void annoying_dog_2_png_data_5(void);
+extern void annoying_dog_2_png_data_6(void);
+extern void annoying_dog_2_png_data_7(void);
+extern void annoying_dog_2_png_data_8(void);
+extern void annoying_dog_2_png_data_9(void);
+extern void annoying_dog_2_png_data_10(void);
+extern void annoying_dog_2_png_data_11(void);
+extern void annoying_dog_2_png_data_12(void);
+extern void annoying_dog_2_png_data_13(void);
+extern void annoying_dog_2_png_data_14(void);
+extern void annoying_dog_2_png_data_15(void);
+extern void annoying_dog_2_png_data_16(void);
+extern void annoying_dog_2_png_data_17(void);
+extern void annoying_dog_2_png_data_18(void);
+
+void (*annoying_dog_2_png_line_table[])(void) = {
+    annoying_dog_2_png_data_0,
+    annoying_dog_2_png_data_1,
+    annoying_dog_2_png_data_2,
+    annoying_dog_2_png_data_3,
+    annoying_dog_2_png_data_4,
+    annoying_dog_2_png_data_5,
+    annoying_dog_2_png_data_6,
+    annoying_dog_2_png_data_7,
+    annoying_dog_2_png_data_8,
+    annoying_dog_2_png_data_9,
+    annoying_dog_2_png_data_10,
+    annoying_dog_2_png_data_11,
+    annoying_dog_2_png_data_12,
+    annoying_dog_2_png_data_13,
+    annoying_dog_2_png_data_14,
+    annoying_dog_2_png_data_15,
+    annoying_dog_2_png_data_16,
+    annoying_dog_2_png_data_17,
+    annoying_dog_2_png_data_18,
+
+};
+
+const struct sprite_proto annoying_dog_2_png_proto = {
+    .width = 23,
+    .height = 19,
+    .line_table = annoying_dog_2_png_line_table
+};
+
+extern void undyne_body_png_data_0(void);
+extern void undyne_body_png_data_1(void);
+extern void undyne_body_png_data_2(void);
+extern void undyne_body_png_data_3(void);
+extern void undyne_body_png_data_4(void);
+extern void undyne_body_png_data_5(void);
+extern void undyne_body_png_data_6(void);
+extern void undyne_body_png_data_7(void);
+extern void undyne_body_png_data_8(void);
+extern void undyne_body_png_data_9(void);
+extern void undyne_body_png_data_10(void);
+extern void undyne_body_png_data_11(void);
+extern void undyne_body_png_data_12(void);
+extern void undyne_body_png_data_13(void);
+extern void undyne_body_png_data_14(void);
+extern void undyne_body_png_data_15(void);
+extern void undyne_body_png_data_16(void);
+extern void undyne_body_png_data_17(void);
+extern void undyne_body_png_data_18(void);
+extern void undyne_body_png_data_19(void);
+extern void undyne_body_png_data_20(void);
+extern void undyne_body_png_data_21(void);
+extern void undyne_body_png_data_22(void);
+extern void undyne_body_png_data_23(void);
+extern void undyne_body_png_data_24(void);
+extern void undyne_body_png_data_25(void);
+extern void undyne_body_png_data_26(void);
+extern void undyne_body_png_data_27(void);
+extern void undyne_body_png_data_28(void);
+extern void undyne_body_png_data_29(void);
+extern void undyne_body_png_data_30(void);
+extern void undyne_body_png_data_31(void);
+extern void undyne_body_png_data_32(void);
+extern void undyne_body_png_data_33(void);
+extern void undyne_body_png_data_34(void);
+extern void undyne_body_png_data_35(void);
+extern void undyne_body_png_data_36(void);
+extern void undyne_body_png_data_37(void);
+extern void undyne_body_png_data_38(void);
+extern void undyne_body_png_data_39(void);
+extern void undyne_body_png_data_40(void);
+extern void undyne_body_png_data_41(void);
+extern void undyne_body_png_data_42(void);
+extern void undyne_body_png_data_43(void);
+extern void undyne_body_png_data_44(void);
+extern void undyne_body_png_data_45(void);
+extern void undyne_body_png_data_46(void);
+extern void undyne_body_png_data_47(void);
+extern void undyne_body_png_data_48(void);
+extern void undyne_body_png_data_49(void);
+extern void undyne_body_png_data_50(void);
+extern void undyne_body_png_data_51(void);
+extern void undyne_body_png_data_52(void);
+extern void undyne_body_png_data_53(void);
+extern void undyne_body_png_data_54(void);
+extern void undyne_body_png_data_55(void);
+extern void undyne_body_png_data_56(void);
+extern void undyne_body_png_data_57(void);
+extern void undyne_body_png_data_58(void);
+extern void undyne_body_png_data_59(void);
+extern void undyne_body_png_data_60(void);
+extern void undyne_body_png_data_61(void);
+extern void undyne_body_png_data_62(void);
+extern void undyne_body_png_data_63(void);
+extern void undyne_body_png_data_64(void);
+extern void undyne_body_png_data_65(void);
+extern void undyne_body_png_data_66(void);
+extern void undyne_body_png_data_67(void);
+extern void undyne_body_png_data_68(void);
+extern void undyne_body_png_data_69(void);
+extern void undyne_body_png_data_70(void);
+extern void undyne_body_png_data_71(void);
+extern void undyne_body_png_data_72(void);
+extern void undyne_body_png_data_73(void);
+extern void undyne_body_png_data_74(void);
+
+void (*undyne_body_png_line_table[])(void) = {
+    undyne_body_png_data_0,
+    undyne_body_png_data_1,
+    undyne_body_png_data_2,
+    undyne_body_png_data_3,
+    undyne_body_png_data_4,
+    undyne_body_png_data_5,
+    undyne_body_png_data_6,
+    undyne_body_png_data_7,
+    undyne_body_png_data_8,
+    undyne_body_png_data_9,
+    undyne_body_png_data_10,
+    undyne_body_png_data_11,
+    undyne_body_png_data_12,
+    undyne_body_png_data_13,
+    undyne_body_png_data_14,
+    undyne_body_png_data_15,
+    undyne_body_png_data_16,
+    undyne_body_png_data_17,
+    undyne_body_png_data_18,
+    undyne_body_png_data_19,
+    undyne_body_png_data_20,
+    undyne_body_png_data_21,
+    undyne_body_png_data_22,
+    undyne_body_png_data_23,
+    undyne_body_png_data_24,
+    undyne_body_png_data_25,
+    undyne_body_png_data_26,
+    undyne_body_png_data_27,
+    undyne_body_png_data_28,
+    undyne_body_png_data_29,
+    undyne_body_png_data_30,
+    undyne_body_png_data_31,
+    undyne_body_png_data_32,
+    undyne_body_png_data_33,
+    undyne_body_png_data_34,
+    undyne_body_png_data_35,
+    undyne_body_png_data_36,
+    undyne_body_png_data_37,
+    undyne_body_png_data_38,
+    undyne_body_png_data_39,
+    undyne_body_png_data_40,
+    undyne_body_png_data_41,
+    undyne_body_png_data_42,
+    undyne_body_png_data_43,
+    undyne_body_png_data_44,
+    undyne_body_png_data_45,
+    undyne_body_png_data_46,
+    undyne_body_png_data_47,
+    undyne_body_png_data_48,
+    undyne_body_png_data_49,
+    undyne_body_png_data_50,
+    undyne_body_png_data_51,
+    undyne_body_png_data_52,
+    undyne_body_png_data_53,
+    undyne_body_png_data_54,
+    undyne_body_png_data_55,
+    undyne_body_png_data_56,
+    undyne_body_png_data_57,
+    undyne_body_png_data_58,
+    undyne_body_png_data_59,
+    undyne_body_png_data_60,
+    undyne_body_png_data_61,
+    undyne_body_png_data_62,
+    undyne_body_png_data_63,
+    undyne_body_png_data_64,
+    undyne_body_png_data_65,
+    undyne_body_png_data_66,
+    undyne_body_png_data_67,
+    undyne_body_png_data_68,
+    undyne_body_png_data_69,
+    undyne_body_png_data_70,
+    undyne_body_png_data_71,
+    undyne_body_png_data_72,
+    undyne_body_png_data_73,
+    undyne_body_png_data_74,
+
+};
+
+const struct sprite_proto undyne_body_png_proto = {
+    .width = 61,
+    .height = 75,
+    .line_table = undyne_body_png_line_table
 };
 

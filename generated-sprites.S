@@ -11,8 +11,8 @@ delay_loop:
     ret
 
 ; line 0
-.global undyne_png_data_0
-undyne_png_data_0:
+.global undyne_head_normal_png_data_0
+undyne_head_normal_png_data_0:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 31 of the same entries follow
     ldi r18, 18
@@ -28,8 +28,8 @@ undyne_png_data_0:
     ret
 
 ; line 1
-.global undyne_png_data_1
-undyne_png_data_1:
+.global undyne_head_normal_png_data_1
+undyne_head_normal_png_data_1:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 30 of the same entries follow
     ldi r18, 17
@@ -48,8 +48,8 @@ undyne_png_data_1:
     ret
 
 ; line 2
-.global undyne_png_data_2
-undyne_png_data_2:
+.global undyne_head_normal_png_data_2
+undyne_head_normal_png_data_2:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 29 of the same entries follow
     ldi r18, 17
@@ -66,8 +66,8 @@ undyne_png_data_2:
     ret
 
 ; line 3
-.global undyne_png_data_3
-undyne_png_data_3:
+.global undyne_head_normal_png_data_3
+undyne_head_normal_png_data_3:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 29 of the same entries follow
     ldi r18, 17
@@ -84,8 +84,8 @@ undyne_png_data_3:
     ret
 
 ; line 4
-.global undyne_png_data_4
-undyne_png_data_4:
+.global undyne_head_normal_png_data_4
+undyne_head_normal_png_data_4:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 24 of the same entries follow
     ldi r18, 13
@@ -112,8 +112,8 @@ undyne_png_data_4:
     ret
 
 ; line 5
-.global undyne_png_data_5
-undyne_png_data_5:
+.global undyne_head_normal_png_data_5
+undyne_head_normal_png_data_5:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 21 of the same entries follow
     ldi r18, 11
@@ -148,8 +148,8 @@ undyne_png_data_5:
     ret
 
 ; line 6
-.global undyne_png_data_6
-undyne_png_data_6:
+.global undyne_head_normal_png_data_6
+undyne_head_normal_png_data_6:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 20 of the same entries follow
     ldi r18, 11
@@ -180,8 +180,8 @@ undyne_png_data_6:
     ret
 
 ; line 7
-.global undyne_png_data_7
-undyne_png_data_7:
+.global undyne_head_normal_png_data_7
+undyne_head_normal_png_data_7:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 19 of the same entries follow
     ldi r18, 10
@@ -218,8 +218,8 @@ undyne_png_data_7:
     ret
 
 ; line 8
-.global undyne_png_data_8
-undyne_png_data_8:
+.global undyne_head_normal_png_data_8
+undyne_head_normal_png_data_8:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 18 of the same entries follow
@@ -257,8 +257,8 @@ undyne_png_data_8:
     ret
 
 ; line 9
-.global undyne_png_data_9
-undyne_png_data_9:
+.global undyne_head_normal_png_data_9
+undyne_head_normal_png_data_9:
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -296,8 +296,8 @@ undyne_png_data_9:
     ret
 
 ; line 10
-.global undyne_png_data_10
-undyne_png_data_10:
+.global undyne_head_normal_png_data_10
+undyne_head_normal_png_data_10:
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -341,8 +341,8 @@ undyne_png_data_10:
     ret
 
 ; line 11
-.global undyne_png_data_11
-undyne_png_data_11:
+.global undyne_head_normal_png_data_11
+undyne_head_normal_png_data_11:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -377,8 +377,8 @@ undyne_png_data_11:
     ret
 
 ; line 12
-.global undyne_png_data_12
-undyne_png_data_12:
+.global undyne_head_normal_png_data_12
+undyne_head_normal_png_data_12:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -411,9 +411,941 @@ undyne_png_data_12:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
+; line 0
+.global undyne_head_blink_png_data_0
+undyne_head_blink_png_data_0:
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 31 of the same entries follow
+    ldi r18, 18
+    rcall delay_loop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 1
+.global undyne_head_blink_png_data_1
+undyne_head_blink_png_data_1:
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 30 of the same entries follow
+    ldi r18, 17
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 2
+.global undyne_head_blink_png_data_2
+undyne_head_blink_png_data_2:
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 29 of the same entries follow
+    ldi r18, 17
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 3
+.global undyne_head_blink_png_data_3
+undyne_head_blink_png_data_3:
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 29 of the same entries follow
+    ldi r18, 17
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 4
+.global undyne_head_blink_png_data_4
+undyne_head_blink_png_data_4:
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 24 of the same entries follow
+    ldi r18, 13
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 5
+.global undyne_head_blink_png_data_5
+undyne_head_blink_png_data_5:
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 21 of the same entries follow
+    ldi r18, 11
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 6
+.global undyne_head_blink_png_data_6
+undyne_head_blink_png_data_6:
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 20 of the same entries follow
+    ldi r18, 11
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 7
+.global undyne_head_blink_png_data_7
+undyne_head_blink_png_data_7:
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 19 of the same entries follow
+    ldi r18, 10
+    rcall delay_loop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 8
+.global undyne_head_blink_png_data_8
+undyne_head_blink_png_data_8:
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 18 of the same entries follow
+    ldi r18, 9
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 9
+.global undyne_head_blink_png_data_9
+undyne_head_blink_png_data_9:
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 16 of the same entries follow
+    ldi r18, 8
+    rcall delay_loop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 10
+.global undyne_head_blink_png_data_10
+undyne_head_blink_png_data_10:
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 12 of the same entries follow
+    ldi r18, 5
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 11
+.global undyne_head_blink_png_data_11
+undyne_head_blink_png_data_11:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 20 of the same entries follow
+    ldi r18, 11
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 12
+.global undyne_head_blink_png_data_12
+undyne_head_blink_png_data_12:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 20 of the same entries follow
+    ldi r18, 11
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 9 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 0
+.global annoying_dog_1_png_data_0
+annoying_dog_1_png_data_0:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 1
+.global annoying_dog_1_png_data_1
+annoying_dog_1_png_data_1:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 2
+.global annoying_dog_1_png_data_2
+annoying_dog_1_png_data_2:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 3
+.global annoying_dog_1_png_data_3
+annoying_dog_1_png_data_3:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 4
+.global annoying_dog_1_png_data_4
+annoying_dog_1_png_data_4:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 5
+.global annoying_dog_1_png_data_5
+annoying_dog_1_png_data_5:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 11 of the same entries follow
+    ldi r18, 5
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 6
+.global annoying_dog_1_png_data_6
+annoying_dog_1_png_data_6:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 7
+.global annoying_dog_1_png_data_7
+annoying_dog_1_png_data_7:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 12 of the same entries follow
+    ldi r18, 5
+    rcall delay_loop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 8
+.global annoying_dog_1_png_data_8
+annoying_dog_1_png_data_8:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 11 of the same entries follow
+    ldi r18, 5
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 9
+.global annoying_dog_1_png_data_9
+annoying_dog_1_png_data_9:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 17 of the same entries follow
+    ldi r18, 9
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 10
+.global annoying_dog_1_png_data_10
+annoying_dog_1_png_data_10:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 17 of the same entries follow
+    ldi r18, 9
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 11
+.global annoying_dog_1_png_data_11
+annoying_dog_1_png_data_11:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 17 of the same entries follow
+    ldi r18, 9
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 12
+.global annoying_dog_1_png_data_12
+annoying_dog_1_png_data_12:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 17 of the same entries follow
+    ldi r18, 9
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
 ; line 13
-.global undyne_png_data_13
-undyne_png_data_13:
+.global annoying_dog_1_png_data_13
+annoying_dog_1_png_data_13:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 16 of the same entries follow
+    ldi r18, 8
+    rcall delay_loop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 14
+.global annoying_dog_1_png_data_14
+annoying_dog_1_png_data_14:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 15 of the same entries follow
+    ldi r18, 7
+    rcall delay_loop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 15
+.global annoying_dog_1_png_data_15
+annoying_dog_1_png_data_15:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 16
+.global annoying_dog_1_png_data_16
+annoying_dog_1_png_data_16:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 17
+.global annoying_dog_1_png_data_17
+annoying_dog_1_png_data_17:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 12 of the same entries follow
+    ldi r18, 5
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 18
+.global annoying_dog_1_png_data_18
+annoying_dog_1_png_data_18:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 0
+.global annoying_dog_2_png_data_0
+annoying_dog_2_png_data_0:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 1
+.global annoying_dog_2_png_data_1
+annoying_dog_2_png_data_1:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 2
+.global annoying_dog_2_png_data_2
+annoying_dog_2_png_data_2:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 3
+.global annoying_dog_2_png_data_3
+annoying_dog_2_png_data_3:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 4
+.global annoying_dog_2_png_data_4
+annoying_dog_2_png_data_4:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 5
+.global annoying_dog_2_png_data_5
+annoying_dog_2_png_data_5:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 11 of the same entries follow
+    ldi r18, 5
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 6
+.global annoying_dog_2_png_data_6
+annoying_dog_2_png_data_6:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 7
+.global annoying_dog_2_png_data_7
+annoying_dog_2_png_data_7:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 10 of the same entries follow
+    ldi r18, 4
+    rcall delay_loop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 8
+.global annoying_dog_2_png_data_8
+annoying_dog_2_png_data_8:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 11 of the same entries follow
+    ldi r18, 5
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 9
+.global annoying_dog_2_png_data_9
+annoying_dog_2_png_data_9:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 17 of the same entries follow
+    ldi r18, 9
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 10
+.global annoying_dog_2_png_data_10
+annoying_dog_2_png_data_10:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 17 of the same entries follow
+    ldi r18, 9
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 11
+.global annoying_dog_2_png_data_11
+annoying_dog_2_png_data_11:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 17 of the same entries follow
+    ldi r18, 9
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 12
+.global annoying_dog_2_png_data_12
+annoying_dog_2_png_data_12:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 17 of the same entries follow
+    ldi r18, 9
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 13
+.global annoying_dog_2_png_data_13
+annoying_dog_2_png_data_13:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 16 of the same entries follow
+    ldi r18, 8
+    rcall delay_loop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 14
+.global annoying_dog_2_png_data_14
+annoying_dog_2_png_data_14:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 15 of the same entries follow
+    ldi r18, 7
+    rcall delay_loop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 15
+.global annoying_dog_2_png_data_15
+annoying_dog_2_png_data_15:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 16
+.global annoying_dog_2_png_data_16
+annoying_dog_2_png_data_16:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 17
+.global annoying_dog_2_png_data_17
+annoying_dog_2_png_data_17:
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 18
+.global annoying_dog_2_png_data_18
+annoying_dog_2_png_data_18:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 0
+.global undyne_body_png_data_0
+undyne_body_png_data_0:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -444,9 +1376,9 @@ undyne_png_data_13:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 14
-.global undyne_png_data_14
-undyne_png_data_14:
+; line 1
+.global undyne_body_png_data_1
+undyne_body_png_data_1:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -474,9 +1406,9 @@ undyne_png_data_14:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 15
-.global undyne_png_data_15
-undyne_png_data_15:
+; line 2
+.global undyne_body_png_data_2
+undyne_body_png_data_2:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -511,9 +1443,9 @@ undyne_png_data_15:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 16
-.global undyne_png_data_16
-undyne_png_data_16:
+; line 3
+.global undyne_body_png_data_3
+undyne_body_png_data_3:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -545,9 +1477,9 @@ undyne_png_data_16:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 17
-.global undyne_png_data_17
-undyne_png_data_17:
+; line 4
+.global undyne_body_png_data_4
+undyne_body_png_data_4:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 5 of the same entries follow
     ldi r18, 1
@@ -577,9 +1509,9 @@ undyne_png_data_17:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 18
-.global undyne_png_data_18
-undyne_png_data_18:
+; line 5
+.global undyne_body_png_data_5
+undyne_body_png_data_5:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 10 of the same entries follow
     ldi r18, 4
@@ -609,9 +1541,9 @@ undyne_png_data_18:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 19
-.global undyne_png_data_19
-undyne_png_data_19:
+; line 6
+.global undyne_body_png_data_6
+undyne_body_png_data_6:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 30 of the same entries follow
     ldi r18, 17
@@ -631,9 +1563,9 @@ undyne_png_data_19:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 20
-.global undyne_png_data_20
-undyne_png_data_20:
+; line 7
+.global undyne_body_png_data_7
+undyne_body_png_data_7:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 31 of the same entries follow
     ldi r18, 18
@@ -650,9 +1582,9 @@ undyne_png_data_20:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 21
-.global undyne_png_data_21
-undyne_png_data_21:
+; line 8
+.global undyne_body_png_data_8
+undyne_body_png_data_8:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 33 of the same entries follow
     ldi r18, 19
@@ -667,9 +1599,9 @@ undyne_png_data_21:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 22
-.global undyne_png_data_22
-undyne_png_data_22:
+; line 9
+.global undyne_body_png_data_9
+undyne_body_png_data_9:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 19 of the same entries follow
     ldi r18, 10
@@ -700,9 +1632,9 @@ undyne_png_data_22:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 23
-.global undyne_png_data_23
-undyne_png_data_23:
+; line 10
+.global undyne_body_png_data_10
+undyne_body_png_data_10:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
     ldi r18, 6
@@ -733,9 +1665,9 @@ undyne_png_data_23:
     sbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 24
-.global undyne_png_data_24
-undyne_png_data_24:
+; line 11
+.global undyne_body_png_data_11
+undyne_body_png_data_11:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
     ldi r18, 6
@@ -778,9 +1710,9 @@ undyne_png_data_24:
     sbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 25
-.global undyne_png_data_25
-undyne_png_data_25:
+; line 12
+.global undyne_body_png_data_12
+undyne_body_png_data_12:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
     ldi r18, 6
@@ -813,9 +1745,9 @@ undyne_png_data_25:
     sbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 26
-.global undyne_png_data_26
-undyne_png_data_26:
+; line 13
+.global undyne_body_png_data_13
+undyne_body_png_data_13:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 14 of the same entries follow
     ldi r18, 7
@@ -847,9 +1779,9 @@ undyne_png_data_26:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 27
-.global undyne_png_data_27
-undyne_png_data_27:
+; line 14
+.global undyne_body_png_data_14
+undyne_body_png_data_14:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 14 of the same entries follow
     ldi r18, 7
@@ -884,9 +1816,9 @@ undyne_png_data_27:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 28
-.global undyne_png_data_28
-undyne_png_data_28:
+; line 15
+.global undyne_body_png_data_15
+undyne_body_png_data_15:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 15 of the same entries follow
     ldi r18, 7
@@ -921,9 +1853,9 @@ undyne_png_data_28:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 29
-.global undyne_png_data_29
-undyne_png_data_29:
+; line 16
+.global undyne_body_png_data_16
+undyne_body_png_data_16:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 16 of the same entries follow
     ldi r18, 8
@@ -960,9 +1892,9 @@ undyne_png_data_29:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 30
-.global undyne_png_data_30
-undyne_png_data_30:
+; line 17
+.global undyne_body_png_data_17
+undyne_body_png_data_17:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 18 of the same entries follow
     ldi r18, 9
@@ -1002,9 +1934,9 @@ undyne_png_data_30:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 31
-.global undyne_png_data_31
-undyne_png_data_31:
+; line 18
+.global undyne_body_png_data_18
+undyne_body_png_data_18:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 21 of the same entries follow
     ldi r18, 11
@@ -1045,9 +1977,9 @@ undyne_png_data_31:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 32
-.global undyne_png_data_32
-undyne_png_data_32:
+; line 19
+.global undyne_body_png_data_19
+undyne_body_png_data_19:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 17 of the same entries follow
     ldi r18, 9
@@ -1089,9 +2021,9 @@ undyne_png_data_32:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 33
-.global undyne_png_data_33
-undyne_png_data_33:
+; line 20
+.global undyne_body_png_data_20
+undyne_body_png_data_20:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 16 of the same entries follow
     ldi r18, 8
@@ -1136,9 +2068,9 @@ undyne_png_data_33:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 34
-.global undyne_png_data_34
-undyne_png_data_34:
+; line 21
+.global undyne_body_png_data_21
+undyne_body_png_data_21:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 16 of the same entries follow
     ldi r18, 8
@@ -1178,9 +2110,9 @@ undyne_png_data_34:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 35
-.global undyne_png_data_35
-undyne_png_data_35:
+; line 22
+.global undyne_body_png_data_22
+undyne_body_png_data_22:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 16 of the same entries follow
     ldi r18, 8
@@ -1219,9 +2151,9 @@ undyne_png_data_35:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 36
-.global undyne_png_data_36
-undyne_png_data_36:
+; line 23
+.global undyne_body_png_data_23
+undyne_body_png_data_23:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 16 of the same entries follow
     ldi r18, 8
@@ -1261,9 +2193,9 @@ undyne_png_data_36:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 37
-.global undyne_png_data_37
-undyne_png_data_37:
+; line 24
+.global undyne_body_png_data_24
+undyne_body_png_data_24:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 16 of the same entries follow
     ldi r18, 8
@@ -1300,9 +2232,9 @@ undyne_png_data_37:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 38
-.global undyne_png_data_38
-undyne_png_data_38:
+; line 25
+.global undyne_body_png_data_25
+undyne_body_png_data_25:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 15 of the same entries follow
     ldi r18, 7
@@ -1341,9 +2273,9 @@ undyne_png_data_38:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 39
-.global undyne_png_data_39
-undyne_png_data_39:
+; line 26
+.global undyne_body_png_data_26
+undyne_body_png_data_26:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 18 of the same entries follow
     ldi r18, 9
@@ -1384,9 +2316,9 @@ undyne_png_data_39:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 40
-.global undyne_png_data_40
-undyne_png_data_40:
+; line 27
+.global undyne_body_png_data_27
+undyne_body_png_data_27:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 14 of the same entries follow
     ldi r18, 7
@@ -1431,9 +2363,9 @@ undyne_png_data_40:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 41
-.global undyne_png_data_41
-undyne_png_data_41:
+; line 28
+.global undyne_body_png_data_28
+undyne_body_png_data_28:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 18 of the same entries follow
     ldi r18, 9
@@ -1477,9 +2409,9 @@ undyne_png_data_41:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 42
-.global undyne_png_data_42
-undyne_png_data_42:
+; line 29
+.global undyne_body_png_data_29
+undyne_body_png_data_29:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 14 of the same entries follow
     ldi r18, 7
@@ -1510,9 +2442,9 @@ undyne_png_data_42:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 43
-.global undyne_png_data_43
-undyne_png_data_43:
+; line 30
+.global undyne_body_png_data_30
+undyne_body_png_data_30:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
     ldi r18, 6
@@ -1561,9 +2493,9 @@ undyne_png_data_43:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 44
-.global undyne_png_data_44
-undyne_png_data_44:
+; line 31
+.global undyne_body_png_data_31
+undyne_body_png_data_31:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
     ldi r18, 6
@@ -1610,9 +2542,9 @@ undyne_png_data_44:
     nop
     ret
 
-; line 45
-.global undyne_png_data_45
-undyne_png_data_45:
+; line 32
+.global undyne_body_png_data_32
+undyne_body_png_data_32:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
     ldi r18, 6
@@ -1657,9 +2589,9 @@ undyne_png_data_45:
     sbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 46
-.global undyne_png_data_46
-undyne_png_data_46:
+; line 33
+.global undyne_body_png_data_33
+undyne_body_png_data_33:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
     ldi r18, 6
@@ -1701,9 +2633,9 @@ undyne_png_data_46:
     sbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 47
-.global undyne_png_data_47
-undyne_png_data_47:
+; line 34
+.global undyne_body_png_data_34
+undyne_body_png_data_34:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
     ldi r18, 6
@@ -1743,9 +2675,9 @@ undyne_png_data_47:
     nop
     ret
 
-; line 48
-.global undyne_png_data_48
-undyne_png_data_48:
+; line 35
+.global undyne_body_png_data_35
+undyne_body_png_data_35:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
     ldi r18, 6
@@ -1786,9 +2718,9 @@ undyne_png_data_48:
     nop
     ret
 
-; line 49
-.global undyne_png_data_49
-undyne_png_data_49:
+; line 36
+.global undyne_body_png_data_36
+undyne_body_png_data_36:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 12 of the same entries follow
     ldi r18, 5
@@ -1831,9 +2763,9 @@ undyne_png_data_49:
     nop
     ret
 
-; line 50
-.global undyne_png_data_50
-undyne_png_data_50:
+; line 37
+.global undyne_body_png_data_37
+undyne_body_png_data_37:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 12 of the same entries follow
     ldi r18, 5
@@ -1869,9 +2801,9 @@ undyne_png_data_50:
     nop
     ret
 
-; line 51
-.global undyne_png_data_51
-undyne_png_data_51:
+; line 38
+.global undyne_body_png_data_38
+undyne_body_png_data_38:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 12 of the same entries follow
     ldi r18, 5
@@ -1907,9 +2839,9 @@ undyne_png_data_51:
     rcall delay_loop
     ret
 
-; line 52
-.global undyne_png_data_52
-undyne_png_data_52:
+; line 39
+.global undyne_body_png_data_39
+undyne_body_png_data_39:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 12 of the same entries follow
     ldi r18, 5
@@ -1956,9 +2888,9 @@ undyne_png_data_52:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 53
-.global undyne_png_data_53
-undyne_png_data_53:
+; line 40
+.global undyne_body_png_data_40
+undyne_body_png_data_40:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 13 of the same entries follow
     ldi r18, 6
@@ -2002,9 +2934,9 @@ undyne_png_data_53:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 54
-.global undyne_png_data_54
-undyne_png_data_54:
+; line 41
+.global undyne_body_png_data_41
+undyne_body_png_data_41:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 12 of the same entries follow
     ldi r18, 5
@@ -2060,9 +2992,9 @@ undyne_png_data_54:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 55
-.global undyne_png_data_55
-undyne_png_data_55:
+; line 42
+.global undyne_body_png_data_42
+undyne_body_png_data_42:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 12 of the same entries follow
     ldi r18, 5
@@ -2110,9 +3042,9 @@ undyne_png_data_55:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 56
-.global undyne_png_data_56
-undyne_png_data_56:
+; line 43
+.global undyne_body_png_data_43
+undyne_body_png_data_43:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 12 of the same entries follow
     ldi r18, 5
@@ -2156,9 +3088,9 @@ undyne_png_data_56:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 57
-.global undyne_png_data_57
-undyne_png_data_57:
+; line 44
+.global undyne_body_png_data_44
+undyne_body_png_data_44:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 12 of the same entries follow
     ldi r18, 5
@@ -2205,9 +3137,9 @@ undyne_png_data_57:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 58
-.global undyne_png_data_58
-undyne_png_data_58:
+; line 45
+.global undyne_body_png_data_45
+undyne_body_png_data_45:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 11 of the same entries follow
     ldi r18, 5
@@ -2246,6 +3178,514 @@ undyne_png_data_58:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 46
+.global undyne_body_png_data_46
+undyne_body_png_data_46:
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 11 of the same entries follow
+    ldi r18, 5
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 47
+.global undyne_body_png_data_47
+undyne_body_png_data_47:
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 11 of the same entries follow
+    ldi r18, 5
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 17 of the same entries follow
+    ldi r18, 9
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 48
+.global undyne_body_png_data_48
+undyne_body_png_data_48:
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 12 of the same entries follow
+    ldi r18, 5
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 49
+.global undyne_body_png_data_49
+undyne_body_png_data_49:
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 10 of the same entries follow
+    ldi r18, 4
+    rcall delay_loop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 50
+.global undyne_body_png_data_50
+undyne_body_png_data_50:
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 7 of the same entries follow
+    ldi r18, 2
+    rcall delay_loop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 51
+.global undyne_body_png_data_51
+undyne_body_png_data_51:
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 8 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 52
+.global undyne_body_png_data_52
+undyne_body_png_data_52:
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 18 of the same entries follow
+    ldi r18, 9
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 6 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 53
+.global undyne_body_png_data_53
+undyne_body_png_data_53:
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 5 of the same entries follow
+    ldi r18, 1
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 14 of the same entries follow
+    ldi r18, 7
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+; 9 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
+    nop
+    nop
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 54
+.global undyne_body_png_data_54
+undyne_body_png_data_54:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 13 of the same entries follow
+    ldi r18, 6
+    rcall delay_loop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 9 of the same entries follow
+    ldi r18, 3
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 55
+.global undyne_body_png_data_55
+undyne_body_png_data_55:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 13 of the same entries follow
+    ldi r18, 6
+    rcall delay_loop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 11 of the same entries follow
+    ldi r18, 5
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 56
+.global undyne_body_png_data_56
+undyne_body_png_data_56:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 13 of the same entries follow
+    ldi r18, 6
+    rcall delay_loop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 12 of the same entries follow
+    ldi r18, 5
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 57
+.global undyne_body_png_data_57
+undyne_body_png_data_57:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 14 of the same entries follow
+    ldi r18, 7
+    rcall delay_loop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 12 of the same entries follow
+    ldi r18, 5
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    ret
+
+; line 58
+.global undyne_body_png_data_58
+undyne_body_png_data_58:
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 15 of the same entries follow
+    ldi r18, 7
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+; 12 of the same entries follow
+    ldi r18, 5
+    rcall delay_loop
+    nop
+    nop
+    sbi _SFR_IO_ADDR(PORTD), 7
+    cbi _SFR_IO_ADDR(PORTD), 7
+    sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2254,516 +3694,8 @@ undyne_png_data_58:
     ret
 
 ; line 59
-.global undyne_png_data_59
-undyne_png_data_59:
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 11 of the same entries follow
-    ldi r18, 5
-    rcall delay_loop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 8 of the same entries follow
-    ldi r18, 3
-    rcall delay_loop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-
-; line 60
-.global undyne_png_data_60
-undyne_png_data_60:
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 11 of the same entries follow
-    ldi r18, 5
-    rcall delay_loop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 6 of the same entries follow
-    ldi r18, 1
-    rcall delay_loop
-    nop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 5 of the same entries follow
-    ldi r18, 1
-    rcall delay_loop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 17 of the same entries follow
-    ldi r18, 9
-    rcall delay_loop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-
-; line 61
-.global undyne_png_data_61
-undyne_png_data_61:
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 12 of the same entries follow
-    ldi r18, 5
-    rcall delay_loop
-    nop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 6 of the same entries follow
-    ldi r18, 1
-    rcall delay_loop
-    nop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 5 of the same entries follow
-    ldi r18, 1
-    rcall delay_loop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 5 of the same entries follow
-    ldi r18, 1
-    rcall delay_loop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-
-; line 62
-.global undyne_png_data_62
-undyne_png_data_62:
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 10 of the same entries follow
-    ldi r18, 4
-    rcall delay_loop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 7 of the same entries follow
-    ldi r18, 2
-    rcall delay_loop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-
-; line 63
-.global undyne_png_data_63
-undyne_png_data_63:
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 6 of the same entries follow
-    ldi r18, 1
-    rcall delay_loop
-    nop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-; 6 of the same entries follow
-    ldi r18, 1
-    rcall delay_loop
-    nop
-    nop
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 7 of the same entries follow
-    ldi r18, 2
-    rcall delay_loop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 6 of the same entries follow
-    ldi r18, 1
-    rcall delay_loop
-    nop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-
-; line 64
-.global undyne_png_data_64
-undyne_png_data_64:
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 6 of the same entries follow
-    ldi r18, 1
-    rcall delay_loop
-    nop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-; 5 of the same entries follow
-    ldi r18, 1
-    rcall delay_loop
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 8 of the same entries follow
-    ldi r18, 3
-    rcall delay_loop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-; 5 of the same entries follow
-    ldi r18, 1
-    rcall delay_loop
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-
-; line 65
-.global undyne_png_data_65
-undyne_png_data_65:
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 5 of the same entries follow
-    ldi r18, 1
-    rcall delay_loop
-    sbi _SFR_IO_ADDR(PORTD), 7
-; 5 of the same entries follow
-    ldi r18, 1
-    rcall delay_loop
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 18 of the same entries follow
-    ldi r18, 9
-    rcall delay_loop
-    nop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-; 6 of the same entries follow
-    ldi r18, 1
-    rcall delay_loop
-    nop
-    nop
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-
-; line 66
-.global undyne_png_data_66
-undyne_png_data_66:
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 5 of the same entries follow
-    ldi r18, 1
-    rcall delay_loop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 14 of the same entries follow
-    ldi r18, 7
-    rcall delay_loop
-    sbi _SFR_IO_ADDR(PORTD), 7
-; 9 of the same entries follow
-    ldi r18, 3
-    rcall delay_loop
-    nop
-    nop
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-
-; line 67
-.global undyne_png_data_67
-undyne_png_data_67:
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 13 of the same entries follow
-    ldi r18, 6
-    rcall delay_loop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 9 of the same entries follow
-    ldi r18, 3
-    rcall delay_loop
-    nop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-
-; line 68
-.global undyne_png_data_68
-undyne_png_data_68:
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 13 of the same entries follow
-    ldi r18, 6
-    rcall delay_loop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 11 of the same entries follow
-    ldi r18, 5
-    rcall delay_loop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-
-; line 69
-.global undyne_png_data_69
-undyne_png_data_69:
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 13 of the same entries follow
-    ldi r18, 6
-    rcall delay_loop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 12 of the same entries follow
-    ldi r18, 5
-    rcall delay_loop
-    nop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-
-; line 70
-.global undyne_png_data_70
-undyne_png_data_70:
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 14 of the same entries follow
-    ldi r18, 7
-    rcall delay_loop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 12 of the same entries follow
-    ldi r18, 5
-    rcall delay_loop
-    nop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-
-; line 71
-.global undyne_png_data_71
-undyne_png_data_71:
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 15 of the same entries follow
-    ldi r18, 7
-    rcall delay_loop
-    nop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-; 12 of the same entries follow
-    ldi r18, 5
-    rcall delay_loop
-    nop
-    nop
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    sbi _SFR_IO_ADDR(PORTD), 7
-    cbi _SFR_IO_ADDR(PORTD), 7
-    ret
-
-; line 72
-.global undyne_png_data_72
-undyne_png_data_72:
+.global undyne_body_png_data_59
+undyne_body_png_data_59:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -2792,9 +3724,9 @@ undyne_png_data_72:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 73
-.global undyne_png_data_73
-undyne_png_data_73:
+; line 60
+.global undyne_body_png_data_60
+undyne_body_png_data_60:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -2828,9 +3760,9 @@ undyne_png_data_73:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 74
-.global undyne_png_data_74
-undyne_png_data_74:
+; line 61
+.global undyne_body_png_data_61
+undyne_body_png_data_61:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2856,9 +3788,9 @@ undyne_png_data_74:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 75
-.global undyne_png_data_75
-undyne_png_data_75:
+; line 62
+.global undyne_body_png_data_62
+undyne_body_png_data_62:
     cbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2890,9 +3822,9 @@ undyne_png_data_75:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 76
-.global undyne_png_data_76
-undyne_png_data_76:
+; line 63
+.global undyne_body_png_data_63
+undyne_body_png_data_63:
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2920,9 +3852,9 @@ undyne_png_data_76:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 77
-.global undyne_png_data_77
-undyne_png_data_77:
+; line 64
+.global undyne_body_png_data_64
+undyne_body_png_data_64:
     cbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2951,9 +3883,9 @@ undyne_png_data_77:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 78
-.global undyne_png_data_78
-undyne_png_data_78:
+; line 65
+.global undyne_body_png_data_65
+undyne_body_png_data_65:
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
@@ -2978,9 +3910,9 @@ undyne_png_data_78:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 79
-.global undyne_png_data_79
-undyne_png_data_79:
+; line 66
+.global undyne_body_png_data_66
+undyne_body_png_data_66:
     sbi _SFR_IO_ADDR(PORTD), 7
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
@@ -3006,9 +3938,9 @@ undyne_png_data_79:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 80
-.global undyne_png_data_80
-undyne_png_data_80:
+; line 67
+.global undyne_body_png_data_67
+undyne_body_png_data_67:
     sbi _SFR_IO_ADDR(PORTD), 7
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 25 of the same entries follow
@@ -3031,9 +3963,9 @@ undyne_png_data_80:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 81
-.global undyne_png_data_81
-undyne_png_data_81:
+; line 68
+.global undyne_body_png_data_68
+undyne_body_png_data_68:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 27 of the same entries follow
     ldi r18, 15
@@ -3058,9 +3990,9 @@ undyne_png_data_81:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 82
-.global undyne_png_data_82
-undyne_png_data_82:
+; line 69
+.global undyne_body_png_data_69
+undyne_body_png_data_69:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 27 of the same entries follow
     ldi r18, 15
@@ -3083,9 +4015,9 @@ undyne_png_data_82:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 83
-.global undyne_png_data_83
-undyne_png_data_83:
+; line 70
+.global undyne_body_png_data_70
+undyne_body_png_data_70:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 27 of the same entries follow
     ldi r18, 15
@@ -3109,9 +4041,9 @@ undyne_png_data_83:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 84
-.global undyne_png_data_84
-undyne_png_data_84:
+; line 71
+.global undyne_body_png_data_71
+undyne_body_png_data_71:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 27 of the same entries follow
     ldi r18, 15
@@ -3137,9 +4069,9 @@ undyne_png_data_84:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 85
-.global undyne_png_data_85
-undyne_png_data_85:
+; line 72
+.global undyne_body_png_data_72
+undyne_body_png_data_72:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 26 of the same entries follow
     ldi r18, 15
@@ -3161,9 +4093,9 @@ undyne_png_data_85:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 86
-.global undyne_png_data_86
-undyne_png_data_86:
+; line 73
+.global undyne_body_png_data_73
+undyne_body_png_data_73:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 22 of the same entries follow
     ldi r18, 12
@@ -3185,9 +4117,9 @@ undyne_png_data_86:
     cbi _SFR_IO_ADDR(PORTD), 7
     ret
 
-; line 87
-.global undyne_png_data_87
-undyne_png_data_87:
+; line 74
+.global undyne_body_png_data_74
+undyne_body_png_data_74:
     cbi _SFR_IO_ADDR(PORTD), 7
 ; 22 of the same entries follow
     ldi r18, 12
