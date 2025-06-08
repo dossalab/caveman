@@ -45,9 +45,9 @@ static struct generator_state g_state = {
 #define OCR_VALUE_BLANK (192 + OCR_VALUE_SYNC_BACKPORCH)
 
 struct sprite my_sprite_list[] = {
-    {.line = 50, .data_start = sprites_elephant_png_15x16_start, .width = 16, .height = 16 },
-    {.line = 200, .data_start = sprites_monke_png_63x16_start, .width = 64, .height = 16 },
-    {.line = 260, .data_start = sprites_snake_png_15x16_start, .width = 16, .height = 16 },
+    { .y = 50, .proto = &elephant_png_proto },
+    { .y = 200, .proto = &monke_png_proto },
+    { .y = 260, .proto = &snake_png_proto },
 };
 
 #define ARRAY_SIZE(x) (sizeof(x) / sizeof(x[0]))
@@ -59,7 +59,7 @@ void build_jumptable()
         for (uint8_t i = 0; i < ARRAY_SIZE(my_sprite_list); i++) {
             struct sprite *sprite = &my_sprite_list[i];
 
-            if (line == sprite->line) {
+            if (line == sprite->y) {
                 g_state.sprite_list[sprite_list_insert_position++] = i;
             }
         }
@@ -105,22 +105,23 @@ ISR(TIMER2_COMP_vect)  {
 
     if (sprite_table_index != SPRITE_LIST_POISON) {
         struct sprite *s = &my_sprite_list[sprite_table_index];
+        const struct sprite_proto *proto = s->proto;
 
-        // XXX: why barrier is neede here?
-        asm volatile ("" ::: "memory");
+        if (g_state.video_line_counter <= s->y && g_state.sprite_line_counter < proto->height) {
+            uint16_t *call_address = proto->data_start + g_state.sprite_line_counter * proto->stride;
 
-        if (g_state.video_line_counter <= s->line && g_state.sprite_line_counter < s->height) {
-            void *data = s->data_start + g_state.sprite_line_counter * s->width;
+            // XXX: why barrier is needed here?
+            asm volatile ("" ::: "memory");
 
             asm __volatile__ (
                 "icall\n\t"
-                :: [addr] "z" (data)
+                :: [addr] "z" (call_address)
             );
             PORTD = 0;
             g_state.sprite_line_counter++;
 
             // end of drawing, go to next sprite
-            if (g_state.sprite_line_counter == s->height) {
+            if (g_state.sprite_line_counter == proto->height) {
                 g_state.current_sprite++;
                 g_state.sprite_line_counter = 0;
             }

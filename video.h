@@ -2,10 +2,14 @@
 
 #include <stdint.h>
 
+struct sprite_proto {
+    uint8_t width, height, stride;
+    uint16_t *data_start;
+};
+
 struct sprite {
-    uint16_t line;
-    void (*data_start)(void);
-    uint8_t width, height;
+    uint16_t y;
+    const struct sprite_proto *proto;
 };
 
 void setup_video();
