@@ -162,13 +162,14 @@ def parse_args():
     p.add_argument('--basedir', type=str, required=True)
     p.add_argument('--input', type=str, required=True, action='append')
     p.add_argument('--compress', action='store_true')
+    p.add_argument('output')
 
     return p.parse_args()
 
 def main():
     args = parse_args()
 
-    with open('generated-sprites.S', 'w') as source_file, open('generated-sprites.h', 'w') as header_file:
+    with open(f'{args.output}.S', 'w') as source_file, open(f'{args.output}.h', 'w') as header_file:
         source = Formatter(source_file, args.compress)
         header = Formatter(header_file)
 

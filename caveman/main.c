@@ -2,7 +2,7 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
-#include "generated-sprites.h"
+#include "generated-sprites.gen.h"
 #include "video.h"
 #include "util.h"
 
