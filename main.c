@@ -54,7 +54,7 @@ int main() {
             sprites[2].proto = &annoying_dog_2_png_proto;
         }
 
-        if (counter % 8) {
+        if (counter % 10 == 0) {
             which_dog = !which_dog;
         }
 
