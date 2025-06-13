@@ -8,8 +8,8 @@
 #include <util/delay.h>
 #include "util.h"
 
-// 312 full, 2 blank lines (see below)
-#define NORMAL_SCANLINES 310
+// 262 full, 2 blank lines (see below)
+#define NORMAL_SCANLINES 260
 #define VIDEO_COUNTER_RELOAD_VALUE NORMAL_SCANLINES
 
 #define MAX_SPRITES 10
