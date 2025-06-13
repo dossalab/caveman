@@ -17,7 +17,7 @@ build-asm-helpers:
 		--input undyne_body.png --compress
 
 flash: all
-	avrdude -c ${AVRDUDE_PROGRAMMER} -p m8 -v -U flash:w:main.elf
+	avrdude -c ${AVRDUDE_PROGRAMMER} -p m8 -v -U flash:w:main.elf -B1
 
 gif:
 	./tools/capture-gif.sh ${CAMERA_NAME} ./res/progress.gif
