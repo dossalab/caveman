@@ -47,8 +47,8 @@ build/generated-sprites.gen.S: build
 		--input annoying_dog_2.png \
 		--input undyne_body.png --compress build/generated-sprites.gen
 
-flash: all
-	avrdude -c ${AVRDUDE_PROGRAMMER} -p m8 -v -U flash:w:main.elf -B1
+flash: build/caveman.elf
+	avrdude -c ${AVRDUDE_PROGRAMMER} -p m8 -v -U flash:w:$< -B1
 
 gif:
 	./tools/capture-gif.sh ${CAMERA_NAME} ./res/progress.gif
