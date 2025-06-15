@@ -32,7 +32,7 @@ class Formatter:
         print(dedent(a) if correct_indent else a, file=self.file)
 
     def add_header_entry(self, sprite: SpriteProto, identifiers: []):
-        for identifier in identifiers:
+        for identifier in set(identifiers):
             self.out(f'extern void {identifier}(void);', correct_indent=False)
         
         self.out(f'\nvoid (*{sprite.identifier}_line_table[])(void) = {{')
@@ -101,20 +101,30 @@ class Formatter:
 
     def add_source_entry(self, sprite: SpriteProto) -> []:
         min_delay_loops = 10
-        collected_identifiers = []
+        line_table_entries = []
+
+        def make_line_identifier(y):
+            return f'{sprite.identifier}_data_{y}'
+
+        last_line = ([], int)
 
         for y in range(sprite.height):
-            line = [sprite.pixels[x, y] for x in range(sprite.width)]
-            line_identifier = f'{sprite.identifier}_data_{y}'
+            pixels = [sprite.pixels[x, y] for x in range(sprite.width)]
 
+            line = list(self._line_compressor(pixels, min_delay_loops // 2)) # each cbi / sbi takes 2 cycles
+            if line == last_line[0]:
+                line_table_entries.append(make_line_identifier(last_line[1]))
+                continue
+
+            line_identifier = make_line_identifier(y)
             self.out(f'''\
                 ; line {y}
                 .global {line_identifier}
                 {line_identifier}:''')
 
-            collected_identifiers.append(line_identifier)
+            line_table_entries.append(line_identifier)
 
-            for value, following in self._line_compressor(line, min_delay_loops // 2): # each cbi / sbi takes 2 cycles
+            for value, following in line:
                 command = 'sbi' if value > 127 else 'cbi'
                 self.out(f'    {command} _SFR_IO_ADDR({VIDEO_BIT_PORT}), {VIDEO_BIT_PIN}', correct_indent=False)
 
@@ -125,12 +135,14 @@ class Formatter:
                     self.out(f'; {following} of the same entries follow')
                     self.out(f'    ldi r18, {num_delay_loops}\n    rcall delay_loop', correct_indent=False)
 
+                    # if rem > 1:
                     for _ in range(rem):
                         self.out('    nop', correct_indent=False)
 
             self.out('    ret\n', correct_indent=False)
+            last_line = (line.copy(), y)
 
-        return collected_identifiers
+        return line_table_entries
 
     def write_source_preamble(self):
         self.out('''\
@@ -193,8 +205,8 @@ def main():
                 pixels=image.load()
             )
 
-            identifiers = source.add_source_entry(sprite)
-            header.add_header_entry(sprite, identifiers)
+            line_table = source.add_source_entry(sprite)
+            header.add_header_entry(sprite, line_table)
 
             total_sprites += 1
 
