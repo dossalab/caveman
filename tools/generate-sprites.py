@@ -35,7 +35,7 @@ class Formatter:
         for identifier in set(identifiers):
             self.out(f'extern void {identifier}(void);', correct_indent=False)
         
-        self.out(f'\nvoid (*{sprite.identifier}_line_table[])(void) = {{')
+        self.out(f'\nconst video_line_func_t {sprite.identifier}_line_table[] PROGMEM = {{')
 
         for identifier in identifiers:
             self.out(f'    {identifier},', correct_indent=False)
@@ -166,6 +166,7 @@ class Formatter:
             #pragma once
 
             #include "video.h"
+            #include <avr/pgmspace.h>
             ''')
 
 def parse_args():

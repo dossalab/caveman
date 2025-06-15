@@ -7,6 +7,7 @@
 #include <string.h>
 #include <util/delay.h>
 #include "util.h"
+#include <avr/pgmspace.h>
 
 // 262 full, 2 blank lines (see below)
 #define NORMAL_SCANLINES 260
@@ -108,13 +109,13 @@ ISR(TIMER2_COMP_vect)  {
         if (g_state.video_line_counter <= s->y && g_state.sprite_line_counter < proto->height) {
             while (TCNT2 == 0) {};
 
-            void *call_address = proto->line_table[ g_state.sprite_line_counter];
+            void *call_address = pgm_read_ptr(&(proto->line_table[g_state.sprite_line_counter]));
 
             // GCC hates a function call here, which sucks. We can still do it in asm, though. We just need a correct address
             // Assumption - called function does not use any registers (edit - allow r18 for counters)
             asm __volatile__ (
                 "icall\n\t"
-                :: [addr] "z" (call_address) : "r18"
+                :: [addr] "z" (call_address) : "r18", "memory"
             );
             PORTD = 0;
             g_state.sprite_line_counter++;

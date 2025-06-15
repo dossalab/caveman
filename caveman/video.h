@@ -2,9 +2,11 @@
 
 #include <stdint.h>
 
+typedef void (*video_line_func_t)(void);
+
 struct sprite_proto {
     uint8_t width, height;
-    void (**line_table)(void);
+    const video_line_func_t *line_table;
 };
 
 struct sprite {
