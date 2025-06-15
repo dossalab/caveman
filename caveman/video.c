@@ -155,7 +155,7 @@ void setup_video(void)
     // Now CPU can do some work in the main loop until timer interrupt fires
 }
 
-void video_wait_v_blank()
+void video_wait_v_blank(void)
 {
     while (!g_state.status_bits.is_v_blank) {
         barrier();
@@ -163,7 +163,7 @@ void video_wait_v_blank()
     }
 }
 
-void video_wait_frame_start()
+void video_wait_frame_start(void)
 {
     while (g_state.status_bits.is_v_blank) {
         barrier();

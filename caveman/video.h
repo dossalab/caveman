@@ -15,8 +15,8 @@ struct sprite {
     const struct sprite_proto *proto;
 };
 
-void setup_video();
+void setup_video(void);
 
-void video_wait_v_blank();
-void video_wait_frame_start();
+void video_wait_v_blank(void);
+void video_wait_frame_start(void);
 void prepare_draw_call(const struct sprite *sprites, uint8_t len);

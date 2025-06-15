@@ -4,6 +4,7 @@
 #define VIDEO_DDR DDRB
 #define VIDEO_SYNC_BIT 3
 
+
 // Pre-calculate these values to make stopping and starting timer faster
 
 // Stopped but configured timer (CTC, OC disconnected)

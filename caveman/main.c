@@ -23,7 +23,7 @@ struct sprite sprites[] = {
     { .tcnt = 23, .y = 50, .proto = &hello_png_proto},
 };
 
-int main() {
+int main(void) {
     DDRD = 0xff;
 
     DDRB |= (1 << PIN2);
