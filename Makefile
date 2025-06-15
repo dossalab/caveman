@@ -41,11 +41,9 @@ build/caveman.elf: ${objects}
 build/generated-sprites.gen.S: build
 	python ./tools/generate-sprites.py \
 		--basedir sprites \
-		--input undyne_head_normal.png \
-		--input undyne_head_blink.png \
-		--input annoying_dog_1.png \
-		--input annoying_dog_2.png \
-		--input undyne_body.png --compress build/generated-sprites.gen
+		--input annoying_dog_1-xxl.png \
+		--input annoying_dog_2-xxl.png \
+		--compress build/generated-sprites.gen
 
 flash: build/caveman.elf
 	avrdude -c ${AVRDUDE_PROGRAMMER} -p m8 -v -U flash:w:$< -B1

@@ -18,9 +18,7 @@
 // so that's around 200 pixels?
 
 struct sprite sprites[] = {
-    { .y = 190, .proto = &undyne_head_normal_png_proto},
-    { .y = 190 - undyne_head_normal_png_proto.height, .proto = &undyne_body_png_proto},
-    { .y = 100, .proto = &annoying_dog_1_png_proto },
+    { .y = 215, .proto = &annoying_dog_1_xxl_png_proto},
 };
 
 int main() {
@@ -39,19 +37,10 @@ int main() {
 
         PORTB |= (1 << PIN2);
 
-        switch (counter) {
-            case 0:
-                sprites[0].proto = &undyne_head_normal_png_proto;
-                break;
-            case 95:
-                sprites[0].proto = &undyne_head_blink_png_proto;
-                break;
-        }
-
         if (which_dog) {
-            sprites[2].proto = &annoying_dog_1_png_proto;
+            sprites[0].proto = &annoying_dog_1_xxl_png_proto;
         } else {
-            sprites[2].proto = &annoying_dog_2_png_proto;
+            sprites[0].proto = &annoying_dog_2_xxl_png_proto;
         }
 
         if (counter % 10 == 0) {
@@ -61,7 +50,7 @@ int main() {
         prepare_draw_call(sprites, ARRAY_SIZE(sprites));
 
         counter++;
-        if (counter > 100) {
+        if (counter >= 100) {
             counter = 0;
         }
 
