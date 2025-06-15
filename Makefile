@@ -10,7 +10,8 @@ CFLAGS := \
 	-Ibuild/ -Icaveman \
 	-DF_CPU=12000000UL \
 	-Wextra \
-	-Wpedantic
+	-Wpedantic \
+	-MMD -MP
 
 LDFLAGS := \
 	${COMMON_FLAGS}
@@ -64,3 +65,5 @@ gif:
 	./tools/capture-gif.sh ${CAMERA_NAME} ./res/progress.gif
 
 .PHONY: all clean flash gif
+
+-include $(objects:.o=.d)
