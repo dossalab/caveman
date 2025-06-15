@@ -106,14 +106,15 @@ class Formatter:
         def make_line_identifier(y):
             return f'{sprite.identifier}_data_{y}'
 
-        last_line = ([], int)
+        seen_lines = dict()
 
         for y in range(sprite.height):
             pixels = [sprite.pixels[x, y] for x in range(sprite.width)]
 
-            line = list(self._line_compressor(pixels, min_delay_loops // 2)) # each cbi / sbi takes 2 cycles
-            if line == last_line[0]:
-                line_table_entries.append(make_line_identifier(last_line[1]))
+            line = tuple(self._line_compressor(pixels, min_delay_loops // 2)) # each cbi / sbi takes 2 cycles
+            if line in seen_lines:
+                seen_y = seen_lines[line]
+                line_table_entries.append(make_line_identifier(seen_y))
                 continue
 
             line_identifier = make_line_identifier(y)
@@ -140,7 +141,7 @@ class Formatter:
                         self.out('    nop', correct_indent=False)
 
             self.out('    ret\n', correct_indent=False)
-            last_line = (line.copy(), y)
+            seen_lines[line] = y
 
         return line_table_entries
 
@@ -195,9 +196,9 @@ def main():
             image = Image.open(pathjoin(args.basedir, path)).convert("L")
             width, height = image.size
 
-            if not is_even(width + 1): # 1 is a padding for ret instruction
-                print(f'{path}: width must be odd, detected width is {width}', file=sys.stderr)
-                continue
+            # if not is_even(width + 1): # 1 is a padding for ret instruction
+            #     print(f'{path}: width must be odd, detected width is {width}', file=sys.stderr)
+            #     continue
 
             sprite = SpriteProto(
                 identifier=path_to_identifier(path),

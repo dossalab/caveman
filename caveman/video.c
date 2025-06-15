@@ -107,7 +107,7 @@ ISR(TIMER2_COMP_vect)  {
         const struct sprite_proto *proto = s->proto;
 
         if (g_state.video_line_counter <= s->y && g_state.sprite_line_counter < proto->height) {
-            while (TCNT2 == 0) {};
+            while (TCNT2 <= s->tcnt) {};
 
             void *call_address = pgm_read_ptr(&(proto->line_table[g_state.sprite_line_counter]));
 

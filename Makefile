@@ -41,8 +41,17 @@ build/caveman.elf: ${objects}
 build/generated-sprites.gen.S: build
 	python ./tools/generate-sprites.py \
 		--basedir sprites \
-		--input annoying_dog_1-xxl.png \
-		--input annoying_dog_2-xxl.png \
+		--input annoying_dog_overworld_dangling_1.png \
+		--input annoying_dog_overworld_dangling_2.png \
+		--input annoying_dog_overworld_dangling_3.png \
+		--input annoying_dog_overworld_dangling_4.png \
+		--input annoying_dog_overworld_dangling_5.png \
+		--input annoying_dog_overworld_dangling_6.png \
+		--input annoying_dog_overworld_dangling_7.png \
+		--input annoying_dog_overworld_dangling_8.png \
+		--input annoying_dog_overworld_dangling_9.png \
+		--input annoying_dog_overworld_dangling_rope.png \
+		--input hello.png \
 		--compress build/generated-sprites.gen
 
 flash: build/caveman.elf

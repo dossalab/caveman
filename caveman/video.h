@@ -11,6 +11,7 @@ struct sprite_proto {
 
 struct sprite {
     uint16_t y;
+    uint8_t tcnt;
     const struct sprite_proto *proto;
 };
 
