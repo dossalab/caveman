@@ -106,6 +106,8 @@ ISR(TIMER2_COMP_vect)  {
         const struct sprite_proto *proto = s->proto;
 
         if (g_state.video_line_counter <= s->y && g_state.sprite_line_counter < proto->height) {
+            while (TCNT2 == 0) {};
+
             void *call_address = proto->line_table[ g_state.sprite_line_counter];
 
             // GCC hates a function call here, which sucks. We can still do it in asm, though. We just need a correct address
