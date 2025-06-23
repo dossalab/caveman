@@ -67,13 +67,16 @@ int main(void) {
         case 8:
             sprites[1].proto = &annoying_dog_overworld_dangling_9_png_proto;
             break;
+        case 9:
+            sprites[1].proto = &annoying_dog_overworld_dangling_10_png_proto;
+            break;
         }
 
         prepare_draw_call(sprites, ARRAY_SIZE(sprites));
 
         counter++;
         if (counter % 8 == 0) {
-            which_dog = (which_dog + 1) % 9;
+            which_dog = (which_dog + 1) % 10;
         }
 
         PORTB &= ~(1 << PIN2);

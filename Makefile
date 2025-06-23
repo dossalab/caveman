@@ -21,6 +21,12 @@ objects := \
 	build/main.o \
 	build/video.o
 
+tool-deps := \
+	tools/generate-sprites.py \
+	tools/compressor.py \
+	tools/compressor-demo.py \
+	Makefile
+
 sprites := \
 	sprites/annoying_dog_overworld_dangling_1.png \
 	sprites/annoying_dog_overworld_dangling_2.png \
@@ -31,16 +37,18 @@ sprites := \
 	sprites/annoying_dog_overworld_dangling_7.png \
 	sprites/annoying_dog_overworld_dangling_8.png \
 	sprites/annoying_dog_overworld_dangling_9.png \
+	sprites/annoying_dog_overworld_dangling_10.png \
 	sprites/annoying_dog_overworld_dangling_rope.png \
 	sprites/hello.png
 
-build/%.o : caveman/%.c Makefile | build
+build/%.o : caveman/%.c $(tool-deps) | build
 	${CC} ${CFLAGS} -c $< -o $@
 
 all: build/caveman.elf
 
-build/generated-sprites.gen.o : build/generated-sprites.gen.S Makefile | build
+build/generated-sprites.gen.o : build/generated-sprites.gen.S $(tool-deps) | build
 	${CC} ${CFLAGS} -c $< -o $@
+	avr-size $@
 
 build:
 	mkdir -p ./build
@@ -48,14 +56,15 @@ build:
 clean:
 	rm -rf ./build
 
-build/caveman.elf: ${objects} Makefile | build
+build/caveman.elf: ${objects} $(tool-deps) | build
 	${CC} ${LDFLAGS} ${objects} -o $@
 	avr-size $@
 
-build/generated-sprites.gen.S: $(sprites) | build
-	python ./tools/generate-sprites.py \
+build/generated-sprites.gen.S: $(sprites) $(tool-deps) | build
+	python ./tools/compressor-demo.py \
 		--basedir sprites \
 		$(addprefix --input ,$(notdir $(sprites))) \
+		--debug --force \
 		--compress build/generated-sprites.gen
 
 flash: build/caveman.elf
