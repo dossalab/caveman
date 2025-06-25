@@ -18,9 +18,9 @@
 // so that's around 200 pixels?
 
 struct sprite sprites[] = {
-    { .tcnt = 37, .y = 259, .proto = &annoying_dog_overworld_dangling_rope_png_proto },
-    { .tcnt = 37, .y = 259 - 128, .proto = &annoying_dog_overworld_dangling_1_png_proto },
-    { .tcnt = 23, .y = 50, .proto = &hello_png_proto},
+    { .tcnt = 37, .y = VIDEO_VISIBLE_SCANLINES - 1, .proto = &annoying_dog_overworld_dangling_rope_png_proto },
+    { .tcnt = 37, .y = VIDEO_VISIBLE_SCANLINES - 1 - 128, .proto = &annoying_dog_overworld_dangling_1_png_proto },
+    { .tcnt = 23, .y = VIDEO_VISIBLE_SCANLINES - 1 - 128 - 38 - 5, .proto = &hello_png_proto},
 };
 
 int main(void) {
@@ -36,39 +36,40 @@ int main(void) {
 
     while (1) {
         video_wait_v_blank();
+        struct sprite *dog = &sprites[1];
 
         PORTB |= (1 << PIN2);
 
         switch (which_dog) {
         case 0:
-            sprites[1].proto = &annoying_dog_overworld_dangling_1_png_proto;
+            dog->proto = &annoying_dog_overworld_dangling_1_png_proto;
             break;
         case 1:
-            sprites[1].proto = &annoying_dog_overworld_dangling_2_png_proto;
+            dog->proto = &annoying_dog_overworld_dangling_2_png_proto;
             break;
         case 2:
-            sprites[1].proto = &annoying_dog_overworld_dangling_3_png_proto;
+            dog->proto = &annoying_dog_overworld_dangling_3_png_proto;
             break;
         case 3:
-            sprites[1].proto = &annoying_dog_overworld_dangling_4_png_proto;
+            dog->proto = &annoying_dog_overworld_dangling_4_png_proto;
             break;
         case 4:
-            sprites[1].proto = &annoying_dog_overworld_dangling_5_png_proto;
+            dog->proto = &annoying_dog_overworld_dangling_5_png_proto;
             break;
         case 5:
-            sprites[1].proto = &annoying_dog_overworld_dangling_6_png_proto;
+            dog->proto = &annoying_dog_overworld_dangling_6_png_proto;
             break;
         case 6:
-            sprites[1].proto = &annoying_dog_overworld_dangling_7_png_proto;
+            dog->proto = &annoying_dog_overworld_dangling_7_png_proto;
             break;
         case 7:
-            sprites[1].proto = &annoying_dog_overworld_dangling_8_png_proto;
+            dog->proto = &annoying_dog_overworld_dangling_8_png_proto;
             break;
         case 8:
-            sprites[1].proto = &annoying_dog_overworld_dangling_9_png_proto;
+            dog->proto = &annoying_dog_overworld_dangling_9_png_proto;
             break;
         case 9:
-            sprites[1].proto = &annoying_dog_overworld_dangling_10_png_proto;
+            dog->proto = &annoying_dog_overworld_dangling_10_png_proto;
             break;
         }
 

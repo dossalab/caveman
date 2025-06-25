@@ -2,6 +2,8 @@
 
 #include <stdint.h>
 
+#define VIDEO_VISIBLE_SCANLINES 260
+
 typedef void (*video_line_func_t)(void);
 
 struct sprite_proto {

@@ -9,15 +9,14 @@
 #include "util.h"
 #include <avr/pgmspace.h>
 
-// 262 full, 2 blank lines (see below)
-#define NORMAL_SCANLINES 260
-#define VIDEO_COUNTER_RELOAD_VALUE NORMAL_SCANLINES
+#define VIDEO_COUNTER_RELOAD_VALUE VIDEO_VISIBLE_SCANLINES
 
 #define MAX_SPRITES 10
 #define SPRITE_LIST_POISON 0xFF
 
 struct generator_state {
     uint8_t sprite_list[MAX_SPRITES];
+    uint8_t num_sprites;
     uint8_t current_sprite;
     uint8_t sprite_line_counter;
     uint16_t video_line_counter;
@@ -48,29 +47,49 @@ static struct generator_state g_state = {
 // 2 scanlines
 #define OCR_VALUE_BLANK (192 + OCR_VALUE_SYNC_BACKPORCH)
 
+static inline bool sprite_sort_predicate(uint8_t i1, uint8_t i2)
+{
+    const struct sprite *s1 = &g_state.sprites[i1];
+    const struct sprite *s2 = &g_state.sprites[i2];
+
+    return s2->y > s1->y;
+}
+
+static void sort_sprite_list(void)
+{
+    uint8_t *array = g_state.sprite_list;
+
+    for (uint8_t i = 1; i < g_state.num_sprites; i++) {
+        uint8_t key = array[i];
+        uint8_t j = i;
+
+        while (j > 0 && !sprite_sort_predicate(key, array[j - 1])) {
+            array[j] = array[j - 1];
+            j--;
+        }
+
+        array[j] = key;
+    }
+}
+
 // This really has to be atomic. There is a good chance though that this entire routine executes before the interrupt fires again
 // Let's hope that's the case
 void prepare_draw_call(const struct sprite *sprites, uint8_t len)
 {
     uint8_t sprite_list_insert_position = 0;
-    for (uint16_t line = NORMAL_SCANLINES - 1;; line--) {
-        for (uint8_t i = 0; i < len; i++) {
-            const struct sprite *sprite = &sprites[i];
 
-            if (line == sprite->y) {
-                g_state.sprite_list[sprite_list_insert_position++] = i;
-            }
-        }
-
-        if (line == 0) {
-            break;
-        }
+    for (uint8_t i = 0; i < len; i++) {
+        const struct sprite *sprite = &sprites[i];
+        g_state.sprite_list[sprite_list_insert_position++] = i;
     }
 
     // terminate the list
     g_state.sprite_list[sprite_list_insert_position] = SPRITE_LIST_POISON;
     g_state.current_sprite = 0;
     g_state.sprites = sprites;
+    g_state.num_sprites = sprite_list_insert_position;
+
+    sort_sprite_list();
 }
 
 ISR(TIMER2_COMP_vect)  {
