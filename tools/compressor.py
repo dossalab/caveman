@@ -75,12 +75,11 @@ def _find_repeated_pixels(line: tuple, min_repetitions: int, preserve_trailing=F
             current = line[x]
             following = 0
 
-    # we still have to yield the last value here
-    if preserve_trailing:
-        yield from dump_values()
-    else:
+    if not preserve_trailing and current == 0:
         # we don't really care about the reminder as it's the end of scanline. Just yield the last value
         yield (current, 0)
+    else:
+        yield from dump_values()
 
 def _compress_run_length(lines: list[tuple], min_repetitions: int, preserve_trailing=False) -> Generator[tuple]:
     for line in lines:
